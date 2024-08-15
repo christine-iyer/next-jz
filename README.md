@@ -45,3 +45,5 @@ npm error enoent This is related to npm not being able to find a file.
 npm error enoent
 npm error A complete log of this run can be found in: /Users/christineiyer/.npm/_logs/2024-08-14T23_21_16_507Z-debug-0.log
 ```
+
+I had cd'd into the wrong file.

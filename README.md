@@ -34,3 +34,14 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+```JS
+npm error code ENOENT
+npm error syscall open
+npm error path /Users/christineiyer/Documents/FrontEndMastersWorkshops/next-jz/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/Users/christineiyer/Documents/FrontEndMastersWorkshops/next-jz/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /Users/christineiyer/.npm/_logs/2024-08-14T23_21_16_507Z-debug-0.log
+```

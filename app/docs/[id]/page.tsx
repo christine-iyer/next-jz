@@ -1,4 +1,4 @@
-export default function DocsIdPage() {
-     return <div>Page ?????</div>
+export default function DocsIdPage({params}) {
+     return <div>Page ????? {params.id}</div>
    }
    

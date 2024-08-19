@@ -1,8 +1,13 @@
+import styles from "../../page.module.css"
 export default function SettingsPage() {
      return (<div> 
       <h1>Page One Transcript</h1>
       <br></br>
-      <p></p>
+      <div>
+      <p className="pageone">CCCC</p>
+      <p className="pageone">B</p>
+      <p className="pageone">C</p>
+      </div>
       </div>)
    }
    

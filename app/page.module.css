@@ -1,3 +1,4 @@
+
 .main {
   display: flex;
   flex-direction: column;
@@ -202,6 +203,7 @@
     z-index: 1;
   }
 }
+
 
 /* Tablet and Smaller Desktop */
 @media (min-width: 701px) and (max-width: 1120px) {

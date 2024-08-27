@@ -1,7 +1,13 @@
 // next.config.js
 module.exports = {
-     images: {
-       domains: ['res.cloudinary.com'], // Add cloudinary domain
-     },
-   };
-   
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+        port: '', // Leave empty if no specific port is required
+        pathname: '/**', // Use '**' to allow all paths under the hostname
+      },
+    ],
+  },
+};

@@ -33,8 +33,9 @@ export default function CardList() {
               className={styles.cardImage}
               src={item.image}
               alt="nj.nmjkbv"
-              width={80}
-              height={200}
+              layout="responsive"
+  width={600}   // Aspect ratio width
+  height={400}  // Aspect ratio height
               // Use fill layout to cover the container
               objectFit="cover" // Cover the entire container without stretching
             />

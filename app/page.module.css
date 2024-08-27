@@ -26,7 +26,7 @@
 
 .cardImage {
   border: rebeccapurple;
-  border-radius: 8px 0 0 8px; /* Optional: adds rounded corners to the image */
+  border-radius: 5%; /* Optional: adds rounded corners to the image */
 }
 
 .cardContent {

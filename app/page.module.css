@@ -1,4 +1,3 @@
-
 .cardContainer {
   display: flex;
   flex-direction: column;
@@ -9,8 +8,10 @@
 
 .card {
   display: flex;
+  flex-direction: row; /* Horizontal layout */
   width: 90%;
-  max-width: 1200px;
+  max-width: 1000px; /* Maximum width for the card */
+  max-height: 200px; /* Maximum height for the card */
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -18,22 +19,26 @@
 }
 
 .cardImageContainer {
-  position: relative; /* Required for next/image fill layout */
-  flex: 0 0 30% 1;
+  flex: 0 0 30%; /* Image takes up 40% of the card width */
+  position: relative;
+  max-height: 90%; /* Ensure the image container doesn’t exceed card height */
 }
 
 .cardImage {
-  height: 100%;
-  border: rebeccapurple;
-  border-radius: 5%; /* Optional: adds rounded corners to the image */
+  object-fit: cover; /* Ensure the image covers the container */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  max-height: 300px; /* Maximum height of the image */
+  border-radius: 8px 0 0 8px; /* Rounded corners on the left */
 }
 
 .cardContent {
-  flex: 1;
+  flex: 1 1 60%; /* Text content takes up the remaining 60% */
   padding: 16px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between; /* Space out the content vertically */
+  overflow-y: auto; /* Allow scrolling if content is too long */
 }
 
 .cardTitle {
@@ -50,4 +55,3 @@
   font-size: 0.9em;
   color: #666;
 }
-

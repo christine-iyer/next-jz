@@ -1,43 +1,39 @@
-import Image from 'next/image'
-import styles from "./page.module.css";
-
+import Image from 'next/image';
 import React from 'react';
-
+import styles from './page.module.css';
 
 const data = [
   {
     id: 0,
-    author: "Chris",
-    title: "Title 1",
-    category: "Description 1",
-   image: "https://res.cloudinary.com/dqjhgnivi/image/upload/v1695219583/ejxe6jo4cnbdluspalxd.jpg",
-    text: "nmm/.m lkjhkj jklhl;k jhl.kjl jkhgljbgk. jhlkh/ikhjjh.kjjn nb,mn"
+    author: 'Chris',
+    title: 'Title 1',
+    category: 'Description 1',
+    image: 'https://res.cloudinary.com/dqjhgnivi/image/upload/v1721434023/c532xccdkr5om017yysf.jpg',
+    text: 'nmm/.m lkjhkj jklhl;k jhl.kjl jkhgljbgk. jhlkh/ikhjjh.kjjn nb,mn',
   },
   {
     id: 1,
-    author: "Chris",
-    title: "Title 2",
-    category: "Description 2",
-    image: "https://res.cloudinary.com/dqjhgnivi/image/upload/v1695219583/ejxe6jo4cnbdluspalxd.jpg",
-    text: "mnbbv"
-  }
+    author: 'Chris',
+    title: 'Title 2',
+    category: 'Description 2',
+    image: 'https://res.cloudinary.com/dqjhgnivi/image/upload/v1720649658/lyd8huczkol0lpwtc1yk.jpg',
+    text: 'mnbbv',
+  },
 ];
 
 export default function CardList() {
   return (
     <div className={styles.cardContainer}>
-      {data.map((item) => (
+      {data.map((item, index) => (
         <div key={item.id} className={styles.card}>
           <div className={styles.cardImageContainer}>
             <Image
-              className={styles.cardImage}
               src={item.image}
-              alt="nj.nmjkbv"
-             
-  width={600}   // Aspect ratio width
-  height={400}  // Aspect ratio height
-              // Use fill layout to cover the container
-              objectFit="cover" // Cover the entire container without stretching
+              alt={item.title}
+              width={400}
+              height={200}
+              className={styles.cardImage}
+              priority={index === 0} // Add priority to the first image
             />
           </div>
           <div className={styles.cardContent}>

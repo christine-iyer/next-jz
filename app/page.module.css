@@ -20,12 +20,10 @@
 .cardImageContainer {
   position: relative; /* Required for next/image fill layout */
   flex: 0 0 30% 1;
-
-
 }
 
 .cardImage {
-  contain: f;
+  height: 100%;
   border: rebeccapurple;
   border-radius: 5%; /* Optional: adds rounded corners to the image */
 }

@@ -1,6 +1,8 @@
+import React, { useState } from "react";
+import { Compact, Circle } from '@uiw/react-color';
 import styles from "../../page.module.css"
 export default function SettingsPage() {
-   const [coordinates, setCoordinates] = useState([])
+
      return (<div> 
       <h1>Page One Transcript</h1>
       <br></br>

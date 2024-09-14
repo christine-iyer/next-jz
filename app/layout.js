@@ -17,6 +17,8 @@ export default function RootLayout({
     { href: '/', label: 'Home' },
     { href: '/pageone', label: 'Page One' },
     { href: '/pagetwo', label: 'Page Two' },
+    { href: '/pagethree', label: 'Page Three' },
+    { href: '/pagefour', label: 'Page Four' },
     { href: '/docs', label: 'Docs' },
   ]
 

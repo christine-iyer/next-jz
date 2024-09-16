@@ -86,6 +86,7 @@ export default function SettingsPage() {
       transform,
     };
     setPetalList([...petalList, newPetal]);
+    console.log(petalList);
   };
 
   return (

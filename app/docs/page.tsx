@@ -1,4 +1,3 @@
 export default function DocsPage() {
-     return <div>Docs Page </div>
-   }
-   
+  return <div>Docs Page </div>
+}

@@ -1,51 +1,26 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+rgb(219, 221, 189),
+rgb(244, 211, 179),
+rgb(192, 227, 218),
+rgb( 224, 221, 189),
+rgb( 192, 175, 208),
+rgb(161, 212, 200),
+rgb(229, 219, 229),
+rgb(187, 185, 138),
+rgb(244, 198, 159),
+rgb(168 194 183) ,
+rgb(242, 184, 140),
+rgb( 203, 201, 157),
+rgb(137, 198, 183),
+rgb( 218, 199, 218),
+rgb(210, 186, 131),
+rgb(155, 163, 115),
+rgb(184,84,68),
+rgb(194, 164, 194),
+rgb(189, 192,160),
+rgb(251,214, 130),
+rgb(1,113,126),
+rgb(251,208,115),
+rgb(207, 194, 145),
+rgb(173,94,101),
+rgb(185,178,146)
 
-## Getting Started
-
-## Need to incorporate mongo 
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-```JS
-npm error code ENOENT
-npm error syscall open
-npm error path /Users/christineiyer/Documents/FrontEndMastersWorkshops/next-jz/package.json
-npm error errno -2
-npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/Users/christineiyer/Documents/FrontEndMastersWorkshops/next-jz/package.json'
-npm error enoent This is related to npm not being able to find a file.
-npm error enoent
-npm error A complete log of this run can be found in: /Users/christineiyer/.npm/_logs/2024-08-14T23_21_16_507Z-debug-0.log
-```
-
-I had cd'd into the wrong file.

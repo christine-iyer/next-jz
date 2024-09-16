@@ -6,11 +6,64 @@ export default function SettingsPage() {
   const [controlPoint1, setControlPoint1] = useState({ x: 44, y: 49 });
   const [controlPoint2, setControlPoint2] = useState({ x: 15, y: 70 });
   const [endPoint, setEndPoint] = useState({ x: 20, y: 100 });
-  const [fillColor, setFillColor] = useState("#FBA834");
-  const [strokeColor, setStrokeColor] = useState("#5F5D9C");
-  const [strokeWidth, setStrokeWidth] = useState(2);
+  const [fillColor, setFillColor] = useState("rgb(244, 211, 179)");
+  const [strokeColor, setStrokeColor] = useState("rgb(192, 227, 218)");
+  const [strokeWidth, setStrokeWidth] = useState(3.5);
   const [transform, setTransform] = useState("translate(50,0)");
   const [petalList, setPetalList] = useState([]);
+  const colorPalette = [
+    "#DBDDBD", // rgb(219, 221, 189)
+    "#F4D3B3", // rgb(244, 211, 179)
+    "#C0E3DA", // rgb(192, 227, 218)
+    "#E0DDBD", // rgb(224, 221, 189)
+    "#C0AFD0", // rgb(192, 175, 208)
+    "#A1D4C8", // rgb(161, 212, 200)
+    "#E5DBE5", // rgb(229, 219, 229)
+    "#BBB98A", // rgb(187, 185, 138)
+    "#F4C69F", // rgb(244, 198, 159)
+    "#A8C2B7", // rgb(168, 194, 183) (missing commas fixed)
+    "#F2B88C", // rgb(242, 184, 140)
+    "#CBC99D", // rgb(203, 201, 157)
+    "#89C6B7", // rgb(137, 198, 183)
+    "#DAC7DA", // rgb(218, 199, 218)
+    "#D2BA83", // rgb(210, 186, 131)
+    "#9BA373", // rgb(155, 163, 115)
+    "#B85444", // rgb(184, 84, 68)
+    "#C2A4C2", // rgb(194, 164, 194)
+    "#BDC0A0", // rgb(189, 192, 160)
+    "#FBD682", // rgb(251, 214, 130)
+    "#01717E", // rgb(1, 113, 126)
+    "#FBD073", // rgb(251, 208, 115)
+    "#CFC291", // rgb(207, 194, 145)
+    "#AD5E65", // rgb(173, 94, 101)
+    "#B9B292"  // rgb(185, 178, 146)
+  ];
+  
+  // const colorPalette = ["rgb(219, 221, 189)",
+  //   "rgb(244, 211, 179)",
+  //   "rgb(192, 227, 218)",
+  //   "rgb( 224, 221, 189)",
+  //   "rgb( 192, 175, 208)",
+  //   "rgb(161, 212, 200)",
+  //   "rgb(229, 219, 229)",
+  //   "rgb(187, 185, 138)",
+  //   "rgb(244, 198, 159)",
+  //   "rgb(168 194 183)" ,
+  //   "rgb(242, 184, 140)",
+  //   "rgb( 203, 201, 157)",
+  //   "rgb(137, 198, 183)",
+  //   "rgb( 218, 199, 218)",
+  //   "rgb(210, 186, 131)",
+  //   "rgb(155, 163, 115)",
+  //   "rgb(184,84,68)",
+  //   "rgb(194, 164, 194)",
+  //   "rgb(189, 192,160)",
+  //   "rgb(251,214, 130)",
+  //   "rgb(1,113,126)",
+  //   "rgb(251,208,115)",
+  //   "rgb(207, 194, 145)",
+  //   "rgb(173,94,101)",
+  //   "rgb(185,178,146)"]
 
   const handleInput = (e, point, setPoint) => {
     const { name, value } = e.target;
@@ -139,7 +192,8 @@ export default function SettingsPage() {
           <label className="block mb-2">Fill Color:</label>
           <Circle
             color={fillColor}
-            colors={['#FFDA76', '#FF8C9E', '#FF4E88', '#ffb6b1', '#ffc0cb']}
+            colors= {colorPalette}
+            // {['#FFDA76', '#FF8C9E', '#FF4E88', '#ffb6b1', '#ffc0cb']}
             onChange={(color) => setFillColor(color.hex)}
           />
         </div>
@@ -147,7 +201,8 @@ export default function SettingsPage() {
           <label className="block mb-2">Stroke Color:</label>
           <Circle
             color={strokeColor}
-            colors={['#66cdaa', '#008000', '#00ced1', '#b4eeb4', '#088da5']}
+            colors= {colorPalette}
+            // {['#66cdaa', '#008000', '#00ced1', '#b4eeb4', '#088da5']}
             onChange={(color) => setStrokeColor(color.hex)}
           />
         </div>

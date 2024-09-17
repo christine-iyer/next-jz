@@ -1,6 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import { Compact, Circle } from '@uiw/react-color';
+import styles from './page.module.css';
+
 
 export default function SettingsPage() {
   const [controlPoint1, setControlPoint1] = useState({ x: 44, y: 49 });
@@ -11,32 +13,42 @@ export default function SettingsPage() {
   const [strokeWidth, setStrokeWidth] = useState(3.5);
   const [transform, setTransform] = useState("translate(50,0)");
   const [petalList, setPetalList] = useState([]);
+
+  const [fillColor1, setFillColor1] = useState("#FF8C9E");
+  const [strokeColor1, setStrokeColor1] = useState("#DAC7DA");
+
+  const [fillColor2, setFillColor2] = useState("#F2B88C");
+  const [strokeColor2, setStrokeColor2] = useState("#B9B292");
+
+  const [fillColor3, setFillColor3] = useState("#89C6B7");
+  const [strokeColor3, setStrokeColor3] = useState("#DAC7DA");
+
   const colorPalette = [
-    "#DBDDBD", // rgb(219, 221, 189)
-    "#F4D3B3", // rgb(244, 211, 179)
-    "#C0E3DA", // rgb(192, 227, 218)
-    "#E0DDBD", // rgb(224, 221, 189)
-    "#C0AFD0", // rgb(192, 175, 208)
-    "#A1D4C8", // rgb(161, 212, 200)
-    "#E5DBE5", // rgb(229, 219, 229)
-    "#BBB98A", // rgb(187, 185, 138)
-    "#F4C69F", 
-    "#A8C2B7",  
-    "#F2B88C", 
-    "#CBC99D", 
-    "#89C6B7", 
-    "#DAC7DA", 
-    "#D2BA83", 
-    "#9BA373", 
-    "#B85444", // rgb(184, 84, 68)
-    "#C2A4C2", // rgb(194, 164, 194)
-    "#BDC0A0", // rgb(189, 192, 160)
-    "#FBD682", // rgb(251, 214, 130)
-    "#01717E", // rgb(1, 113, 126)
-    "#FBD073", // rgb(251, 208, 115)
-    "#CFC291", // rgb(207, 194, 145)
-    "#AD5E65", // rgb(173, 94, 101)
-    "#B9B292"  // rgb(185, 178, 146)
+    "#DBDDBD",
+    "#F4D3B3",
+    "#C0E3DA",
+    "#E0DDBD",
+    "#C0AFD0",
+    "#A1D4C8",
+    "#E5DBE5",
+    "#BBB98A",
+    "#F4C69F",
+    "#A8C2B7",
+    "#F2B88C",
+    "#CBC99D",
+    "#89C6B7",
+    "#DAC7DA",
+    "#D2BA83",
+    "#9BA373",
+    "#B85444",
+    "#C2A4C2",
+    "#BDC0A0",
+    "#FBD682",
+    "#01717E",
+    "#FBD073",
+    "#CFC291",
+    "#AD5E65",
+    "#B9B292"
   ];
 
   const colorPalettes = [
@@ -66,8 +78,19 @@ export default function SettingsPage() {
     { id: 24, hex: "#AD5E65", rgb: "rgb(173, 94, 101)", colorName: "Redbud" },
     { id: 25, hex: "#B9B292", rgb: "rgb(185, 178, 146)", colorName: "Koi Pond" }
   ];
-  
 
+
+  function randomizeColors(colorPalette, objectsArray) {
+    // Helper function to get a random color from the colorPalette
+    function getRandomColor() {
+      return colorPalette[Math.floor(Math.random() * colorPalette.length)];
+    }
+
+    // Loop through each object in the array and assign a random color
+    objectsArray.forEach(object => {
+      object.color = getRandomColor();
+    });
+  }
   const handleInput = (e, point, setPoint) => {
     const { name, value } = e.target;
     setPoint((prev) => ({ ...prev, [name]: parseFloat(value) }));
@@ -94,8 +117,124 @@ export default function SettingsPage() {
 
   return (
     <div className="p-6">
-      <h1 className="text-2xl font-bold mb-4">SVG Shape Generator</h1>
 
+      <div>
+        <div className="p-6">
+          <h1 className="text-2xl font-bold mb-4">SVG Shape Generator</h1>
+
+          {/* SVG 1 Color Pickers */}
+          <div className="mb-6">
+            <h2 className="text-lg font-semibold mb-2">Front Wall</h2>
+            <div className="flex gap-6 flex-wrap">
+              <div className="w-36">
+                <label className="block mb-2">Fill Color:</label>
+                <div className={styles.colorGrid}>
+
+                  <Circle
+                    color={fillColor1}
+                    colors={colorPalette}
+                    onChange={(color) => setFillColor1(color.hex)}
+                  />
+                </div>
+              </div>
+              <div className="w-36">
+                <label className="block mb-2">Stroke Color:</label>
+                <div className={styles.colorGrid}>
+                  <Circle
+                    color={strokeColor1}
+                    colors={colorPalette}
+                    onChange={(color) => setStrokeColor1(color.hex)}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* SVG 2 Color Pickers */}
+          <div className="mb-6">
+            <h2 className="text-lg font-semibold mb-2">Ceiling</h2>
+            <div className="flex gap-6 flex-wrap">
+              <div className="w-36">
+                <label className="block mb-2">Fill Color:</label>
+                <div className={styles.colorGrid}>
+                  <Circle
+                    color={fillColor2}
+                    colors={colorPalette}
+                    onChange={(color) => setFillColor2(color.hex)}
+                  />
+                </div>
+              </div>
+              <div className="w-36">
+                <label className="block mb-2">Stroke Color:</label>
+                <div className={styles.colorGrid}>
+                  <Circle
+                    color={strokeColor2}
+                    colors={colorPalette}
+                    onChange={(color) => setStrokeColor2(color.hex)}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* SVG 3 Color Pickers */}
+          <div className="mb-6">
+            <h2 className="text-lg font-semibold mb-2">Right Wall</h2>
+            <div className="flex gap-6 flex-wrap">
+              <div className="w-36">
+                <label className="block mb-2">Fill Color:</label>
+                <div className={styles.colorGrid}>
+                  <Circle
+                    color={fillColor3}
+                    colors={colorPalette}
+                    onChange={(color) => setFillColor3(color.hex)}
+                  />
+                </div>
+              </div>
+              <div className="w-36">
+                <label className="block mb-2">Stroke Color:</label>
+                <div className={styles.colorGrid}>
+                  <Circle
+                    color={strokeColor3}
+                    colors={colorPalette}
+                    onChange={(color) => setStrokeColor3(color.hex)}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* SVG Preview */}
+          <div className={styles.box}>
+            <svg width="900" height="500" xmlns="http://www.w3.org/2000/svg" >
+              {/* Path 1 */}
+              <path
+                d="M 50 50 L 150 50 L 150 150 L 50 150 Z"
+                fill={fillColor1}
+                stroke={strokeColor1}
+                strokeWidth={strokeWidth}
+              />
+              {/* Path 2 */}
+              <path
+                d="M 50 50 L 100 20 L 200 20 L 150 50 Z"
+                fill={fillColor2}
+                stroke={strokeColor2}
+                strokeWidth={strokeWidth}
+              />
+              {/* Path 3 */}
+              <path
+                d="M 150 50 L 200 20 L 200 120 L 150 150 Z"
+                fill={fillColor3}
+                stroke={strokeColor3}
+                strokeWidth={strokeWidth}
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+
+      <h1 className="text-2xl font-bold mb-4">SVG Shape Generator</h1>
       {/* Control Point 1 Inputs */}
       <div className="flex gap-4 mb-4">
         <div>
@@ -119,7 +258,6 @@ export default function SettingsPage() {
           />
         </div>
       </div>
-
       {/* Control Point 2 Inputs */}
       <div className="flex gap-4 mb-4">
         <div>
@@ -189,26 +327,29 @@ export default function SettingsPage() {
           />
         </div>
       </div>
-
       {/* Color Pickers */}
-      <div className="flex gap-6 flex-wrap mb-6">
+      <div className="flex gap-6 flex-wrap mb-6" >
         <div className="w-36">
           <label className="block mb-2">Fill Color:</label>
-          <Circle
-            color={fillColor}
-            colors= {colorPalette}
-            // {['#FFDA76', '#FF8C9E', '#FF4E88', '#ffb6b1', '#ffc0cb']}
-            onChange={(color) => setFillColor(color.hex)}
-          />
-        </div>
+          <div className={styles.colorGrid}>
+            <Circle
+              className=""
+              color={fillColor}
+              colors={colorPalette}
+              // {['#FFDA76', '#FF8C9E', '#FF4E88', '#ffb6b1', '#ffc0cb']}
+              onChange={(color) => setFillColor(color.hex)}
+            />
+          </div></div>
         <div className="w-36">
           <label className="block mb-2">Stroke Color:</label>
-          <Circle
-            color={strokeColor}
-            colors= {colorPalette}
-            // {['#66cdaa', '#008000', '#00ced1', '#b4eeb4', '#088da5']}
-            onChange={(color) => setStrokeColor(color.hex)}
-          />
+          <div className={styles.colorGrid}>
+            <Circle
+              color={strokeColor}
+              colors={colorPalette}
+              // {['#66cdaa', '#008000', '#00ced1', '#b4eeb4', '#088da5']}
+              onChange={(color) => setStrokeColor(color.hex)}
+            />
+          </div>
         </div>
       </div>
 
@@ -218,7 +359,6 @@ export default function SettingsPage() {
       >
         Submit
       </button>
-
       {/* SVG Preview */}
       <div className="mt-6">
         <svg
@@ -234,23 +374,8 @@ export default function SettingsPage() {
             transform={transform}
           />
         </svg>
-        <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
 
-  <path d="M 50 50 L 150 50 L 150 150 L 50 150 Z" fill="#FF8C9E" stroke="#DAC7DA" />
-<path d="M 50 50 L 100 20 L 200 20 L 150 50 Z" fill="#F2B88C" stroke="#B9B292" />
-<path d="M 150 50 L 200 20 L 200 120 L 150 150 Z" fill="#89C6B7" stroke="#DAC7DA" />
-{/* <path d="M 100 20 L 100 120 L 200 120" fill="#D2BA83" stroke="#CBC99D" /> */}
-{/* "#F4C69F", 
-    "#A8C2B7",  
-    "#F2B88C", 
-    "#CBC99D", 
-    "#89C6B7", 
-    "#DAC7DA", 
-    "#D2BA83", 
-    "#9BA373",  */}
-</svg>
       </div>
-
       {/* List of Petals */}
       <div className="flex flex-wrap gap-4 mt-6">
         {petalList.map((petal, index) => (
@@ -275,5 +400,6 @@ export default function SettingsPage() {
         ))}
       </div>
     </div>
+
   );
 }

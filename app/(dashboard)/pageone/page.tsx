@@ -21,7 +21,7 @@ export default function SettingsPage() {
     "#E5DBE5", // rgb(229, 219, 229)
     "#BBB98A", // rgb(187, 185, 138)
     "#F4C69F", // rgb(244, 198, 159)
-    "#A8C2B7", // rgb(168, 194, 183) (missing commas fixed)
+    "#A8C2B7", // rgb(168, 194, 183) 
     "#F2B88C", // rgb(242, 184, 140)
     "#CBC99D", // rgb(203, 201, 157)
     "#89C6B7", // rgb(137, 198, 183)
@@ -38,6 +38,35 @@ export default function SettingsPage() {
     "#AD5E65", // rgb(173, 94, 101)
     "#B9B292"  // rgb(185, 178, 146)
   ];
+
+  // const colorPalette = [
+  //   { id: 1, hex: "#DBDDBD", rgb: "rgb(219, 221, 189)", colorName: "Honeydew" },
+  //   { id: 2, hex: "#F4D3B3", rgb: "rgb(244, 211, 179)", colorName: "Flattering Peach" },
+  //   { id: 3, hex: "#C0E3DA", rgb: "rgb(192, 227, 218)", colorName: "Waterfall" },
+  //   { id: 4, hex: "#E0DDBD", rgb: "rgb(224, 221, 189)", colorName: "Celery" },
+  //   { id: 5, hex: "#C0AFD0", rgb: "rgb(192, 175, 208)", colorName: "Magical" },
+  //   { id: 6, hex: "#A1D4C8", rgb: "rgb(161, 212, 200)", colorName: "Refresh" },
+  //   { id: 7, hex: "#E5DBE5", rgb: "rgb(229, 219, 229)", colorName: "Spangle" },
+  //   { id: 8, hex: "#BBB98A", rgb: "rgb(187, 185, 138)", colorName: "Baby Bok Choy" },
+  //   { id: 9, hex: "#F4C69F", rgb: "rgb(244, 198, 159)", colorName: "Avid Apricot" },
+  //   { id: 10, hex: "#A8C2B7", rgb: "rgb(168, 194, 183)", colorName: "Rosewood" },
+  //   { id: 11, hex: "#F2B88C", rgb: "rgb(242, 184, 140)", colorName: "Melón Meloso" },
+  //   { id: 12, hex: "#CBC99D", rgb: "rgb(203, 201, 157)", colorName: "Shagreen" },
+  //   { id: 13, hex: "#89C6B7", rgb: "rgb(137, 198, 183)", colorName: "Aquastone" },
+  //   { id: 14, hex: "#DAC7DA", rgb: "rgb(218, 199, 218)", colorName: "Euphoric Lilac" },
+  //   { id: 15, hex: "#D2BA83", rgb: "rgb(210, 186, 131)", colorName: "Independent Gold" },
+  //   { id: 16, hex: "#9BA373", rgb: "rgb(155, 163, 115)", colorName: "Cucuzza Verde" },
+  //   { id: 17, hex: "#B85444", rgb: "rgb(184, 84, 68)", colorName: "Peppery" },
+  //   { id: 18, hex: "#C2A4C2", rgb: "rgb(194, 164, 194)", colorName: "Novel Lilac" },
+  //   { id: 19, hex: "#BDC0A0", rgb: "rgb(189, 192, 160)", colorName: "Recycled Glass" },
+  //   { id: 20, hex: "#FBD682", rgb: "rgb(251, 214, 130)", colorName: "Honey Bees" },
+  //   { id: 21, hex: "#01717E", rgb: "rgb(1, 113, 126)", colorName: "Blue Nile" },
+  //   { id: 22, hex: "#FBD073", rgb: "rgb(251, 208, 115)", colorName: "Golden Plumeria" },
+  //   { id: 23, hex: "#CFC291", rgb: "rgb(207, 194, 145)", colorName: "Hearts of Palm" },
+  //   { id: 24, hex: "#AD5E65", rgb: "rgb(173, 94, 101)", colorName: "Redbud" },
+  //   { id: 25, hex: "#B9B292", rgb: "rgb(185, 178, 146)", colorName: "Koi Pond" }
+  // ];
+  
   
   // const colorPalette = ["rgb(219, 221, 189)",
   //   "rgb(244, 211, 179)",
@@ -231,6 +260,18 @@ export default function SettingsPage() {
             transform={transform}
           />
         </svg>
+        <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+
+  <path d="M 50 50 L 150 50 L 150 150 L 50 150 Z" fill="none" stroke="black" />
+
+  <path d="M 50 50 L 100 20 L 200 20 L 150 50 Z" fill="none" stroke="black" />
+
+
+  <path d="M 150 50 L 200 20 L 200 120 L 150 150 Z" fill="none" stroke="black" />
+
+
+  <path d="M 100 20 L 100 120 L 200 120" fill="none" stroke="black" />
+</svg>
       </div>
 
       {/* List of Petals */}

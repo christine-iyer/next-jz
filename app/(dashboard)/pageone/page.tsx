@@ -79,29 +79,7 @@ export default function SettingsPage() {
 
   return (
     <div className="flex flex-col">
-      <a href="#" className="flex flex-col items-center bg-white border border-yellow-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-yellow-100 dark:border-yellow-700 dark:bg-yellow-800 dark:hover:bg-yellow-700">
-        <svg
-          viewBox="0 0 100 100"
-          className="w-80 h-80 "
-        >
-          <path
-            d={`M0,0 C${controlPoint1.x},${controlPoint1.y} ${controlPoint2.x},${controlPoint2.y} ${endPoint.x},${endPoint.y}
-              L0,85 L-${endPoint.x},${endPoint.y} C-${controlPoint2.x},${controlPoint2.y} -${controlPoint1.x},${controlPoint1.y} 0,0`}
-            fill={fillColor}
-            stroke={strokeColor}
-            strokeWidth={strokeWidth}
-            transform={transform}
-          />
-        </svg>
-
-        <div className="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" ></div>
-        <div className="flex flex-col justify-between p-4 leading-normal">
-          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-          <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-        </div>
-      </a>
-
-
+     
       <div className="bg-gradient-to-r from-[#FBD073] to-[#E5DBE5] max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col justify-between p-4 leading-normal">
         <div className="flex flex-col">
           <h1 className="text-2xl font-bold mb-4">Paint Color Visualizer</h1>

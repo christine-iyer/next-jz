@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { Compact, Circle } from '@uiw/react-color';
+import { Circle } from '@uiw/react-color';
 import styles from './page.module.css';
 
 
@@ -23,34 +23,7 @@ export default function SettingsPage() {
   const [fillColor3, setFillColor3] = useState("#89C6B7");
   const [strokeColor3, setStrokeColor3] = useState("#DAC7DA");
 
-  const colorPalette = [
-    "#DBDDBD",
-    "#F4D3B3",
-    "#C0E3DA",
-    "#E0DDBD",
-    "#C0AFD0",
-    "#A1D4C8",
-    "#E5DBE5",
-    "#BBB98A",
-    "#F4C69F",
-    "#A8C2B7",
-    "#F2B88C",
-    "#CBC99D",
-    "#89C6B7",
-    "#DAC7DA",
-    "#D2BA83",
-    "#9BA373",
-    "#B85444",
-    "#C2A4C2",
-    "#BDC0A0",
-    "#FBD682",
-    "#01717E",
-    "#FBD073",
-    "#CFC291",
-    "#AD5E65",
-    "#B9B292"
-  ];
-
+  
   const colorPalettes = [
     { id: 1, hex: "#DBDDBD", rgb: "rgb(219, 221, 189)", colorName: "Honeydew" },
     { id: 2, hex: "#F4D3B3", rgb: "rgb(244, 211, 179)", colorName: "Flattering Peach" },
@@ -80,17 +53,6 @@ export default function SettingsPage() {
   ];
 
 
-  function randomizeColors(colorPalette, objectsArray) {
-    // Helper function to get a random color from the colorPalette
-    function getRandomColor() {
-      return colorPalette[Math.floor(Math.random() * colorPalette.length)];
-    }
-
-    // Loop through each object in the array and assign a random color
-    objectsArray.forEach(object => {
-      object.color = getRandomColor();
-    });
-  }
   const handleInput = (e, point, setPoint) => {
     const { name, value } = e.target;
     setPoint((prev) => ({ ...prev, [name]: parseFloat(value) }));
@@ -116,11 +78,11 @@ export default function SettingsPage() {
   };
 
   return (
-    <div className="p-6">
+    <div className="p-6 flex">
 
-      <div>
-        <div className="p-6">
-          <h1 className="text-2xl font-bold mb-4">SVG Shape Generator</h1>
+      <div >
+        <div className="p-6 bg-gradient-to-r from-[#FBD073] to-[#E5DBE5]" >
+          <h1 className="text-2xl font-bold mb-4">Paint Color Visualizer</h1>
 
           {/* SVG 1 Color Pickers */}
           <div className="mb-6">
@@ -129,11 +91,12 @@ export default function SettingsPage() {
               <div className="w-36">
                 <label className="block mb-2">Fill Color:</label>
                 <div className={styles.colorGrid}>
-
                   <Circle
                     color={fillColor1}
-                    colors={colorPalette}
+                    colors={colorPalettes.map(palette => palette.hex)}
                     onChange={(color) => setFillColor1(color.hex)}
+                  // colors={colorPalette}
+                  // onChange={(color) => setFillColor1(color.hex)}
                   />
                 </div>
               </div>
@@ -142,8 +105,10 @@ export default function SettingsPage() {
                 <div className={styles.colorGrid}>
                   <Circle
                     color={strokeColor1}
-                    colors={colorPalette}
+                    colors = {colorPalettes.map(p => p.hex)}
                     onChange={(color) => setStrokeColor1(color.hex)}
+                  // colors={colorPalette}
+                  // onChange={(color) => setStrokeColor1(color.hex)}
                   />
                 </div>
               </div>
@@ -159,7 +124,7 @@ export default function SettingsPage() {
                 <div className={styles.colorGrid}>
                   <Circle
                     color={fillColor2}
-                    colors={colorPalette}
+                    colors={colorPalettes.map(p=>p.hex)}
                     onChange={(color) => setFillColor2(color.hex)}
                   />
                 </div>
@@ -169,7 +134,7 @@ export default function SettingsPage() {
                 <div className={styles.colorGrid}>
                   <Circle
                     color={strokeColor2}
-                    colors={colorPalette}
+                    colors={colorPalettes.map(p=> p.hex)}
                     onChange={(color) => setStrokeColor2(color.hex)}
                   />
                 </div>
@@ -186,7 +151,7 @@ export default function SettingsPage() {
                 <div className={styles.colorGrid}>
                   <Circle
                     color={fillColor3}
-                    colors={colorPalette}
+                    colors={colorPalettes.map(p=> p.hex)}
                     onChange={(color) => setFillColor3(color.hex)}
                   />
                 </div>
@@ -196,7 +161,7 @@ export default function SettingsPage() {
                 <div className={styles.colorGrid}>
                   <Circle
                     color={strokeColor3}
-                    colors={colorPalette}
+                    colors={colorPalettes.map(p=> p.hex)}
                     onChange={(color) => setStrokeColor3(color.hex)}
                   />
                 </div>
@@ -335,7 +300,7 @@ export default function SettingsPage() {
             <Circle
               className=""
               color={fillColor}
-              colors={colorPalette}
+              colors={colorPalettes.map(p=>p.hex)}
               // {['#FFDA76', '#FF8C9E', '#FF4E88', '#ffb6b1', '#ffc0cb']}
               onChange={(color) => setFillColor(color.hex)}
             />
@@ -345,7 +310,7 @@ export default function SettingsPage() {
           <div className={styles.colorGrid}>
             <Circle
               color={strokeColor}
-              colors={colorPalette}
+              colors={colorPalettes.map(p=>p.hex)}
               // {['#66cdaa', '#008000', '#00ced1', '#b4eeb4', '#088da5']}
               onChange={(color) => setStrokeColor(color.hex)}
             />

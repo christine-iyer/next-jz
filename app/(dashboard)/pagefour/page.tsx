@@ -34,7 +34,7 @@ const TanStackTableComponent: React.FC = () => {
 
   // Generate random data only after the component mounts (client-side)
   useEffect(() => {
-    setData(generateRandomData(10));
+    setData(generateRandomData(4));
   }, []);
 
   // Create a column helper for defining columns
@@ -73,7 +73,7 @@ const TanStackTableComponent: React.FC = () => {
   return (
     <div>
       <h1>TanStack Table with Random Data</h1>
-      <table style={{ border: '1px solid black', width: '100%', marginTop: '20px' }}>
+      <table style={{ border: '1px solid black', width: '100%', marginTop: '20px' }} >
         <thead>
           {table.getHeaderGroups().map((headerGroup) => (
             <tr key={headerGroup.id}>

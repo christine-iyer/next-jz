@@ -78,7 +78,7 @@ export default function SettingsPage() {
   };
 
   return (
-    <div className="p-6 flex">
+    <div className="p-6 ">
 
       <div >
         <div className="p-6 bg-gradient-to-r from-[#FBD073] to-[#E5DBE5]" >

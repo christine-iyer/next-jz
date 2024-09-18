@@ -80,8 +80,8 @@ export default function SettingsPage() {
   return (
     <div className="flex flex-col">
      
-      <div className="bg-gradient-to-r from-[#FBD073] to-[#E5DBE5] max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col justify-between p-4 leading-normal">
-        <div className="flex flex-col">
+      <div className="flex mb-4 bg-gradient-to-r from-[#FBD073] to-[#E5DBE5] max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex-none justify-between p-4 leading-normal ">
+        <div className="">
           <h1 className="text-2xl font-bold mb-4">Paint Color Visualizer</h1>
 
           {/* SVG 1 Color Pickers */}

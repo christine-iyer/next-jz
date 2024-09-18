@@ -23,7 +23,7 @@ export default function SettingsPage() {
   const [fillColor3, setFillColor3] = useState("#89C6B7");
   const [strokeColor3, setStrokeColor3] = useState("#DAC7DA");
 
-  
+
   const colorPalettes = [
     { id: 1, hex: "#DBDDBD", rgb: "rgb(219, 221, 189)", colorName: "Honeydew" },
     { id: 2, hex: "#F4D3B3", rgb: "rgb(244, 211, 179)", colorName: "Flattering Peach" },
@@ -78,14 +78,36 @@ export default function SettingsPage() {
   };
 
   return (
-    <div className="p-6 ">
+    <div className="flex flex-col">
+      <a href="#" className="flex flex-col items-center bg-white border border-yellow-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-yellow-100 dark:border-yellow-700 dark:bg-yellow-800 dark:hover:bg-yellow-700">
+        <svg
+          viewBox="0 0 100 100"
+          className="w-80 h-80 "
+        >
+          <path
+            d={`M0,0 C${controlPoint1.x},${controlPoint1.y} ${controlPoint2.x},${controlPoint2.y} ${endPoint.x},${endPoint.y}
+              L0,85 L-${endPoint.x},${endPoint.y} C-${controlPoint2.x},${controlPoint2.y} -${controlPoint1.x},${controlPoint1.y} 0,0`}
+            fill={fillColor}
+            stroke={strokeColor}
+            strokeWidth={strokeWidth}
+            transform={transform}
+          />
+        </svg>
 
-      <div >
-        <div className="p-6 bg-gradient-to-r from-[#FBD073] to-[#E5DBE5]" >
+        <div className="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" ></div>
+        <div className="flex flex-col justify-between p-4 leading-normal">
+          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
+          <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+        </div>
+      </a>
+
+
+      <div className="bg-gradient-to-r from-[#FBD073] to-[#E5DBE5] max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col justify-between p-4 leading-normal">
+        <div className="flex flex-col">
           <h1 className="text-2xl font-bold mb-4">Paint Color Visualizer</h1>
 
           {/* SVG 1 Color Pickers */}
-          <div className="mb-6">
+          <div className="flex flex-col items-center">
             <h2 className="text-lg font-semibold mb-2">Front Wall</h2>
             <div className="flex gap-6 flex-wrap">
               <div className="w-36">
@@ -105,7 +127,7 @@ export default function SettingsPage() {
                 <div className={styles.colorGrid}>
                   <Circle
                     color={strokeColor1}
-                    colors = {colorPalettes.map(p => p.hex)}
+                    colors={colorPalettes.map(p => p.hex)}
                     onChange={(color) => setStrokeColor1(color.hex)}
                   // colors={colorPalette}
                   // onChange={(color) => setStrokeColor1(color.hex)}
@@ -124,7 +146,7 @@ export default function SettingsPage() {
                 <div className={styles.colorGrid}>
                   <Circle
                     color={fillColor2}
-                    colors={colorPalettes.map(p=>p.hex)}
+                    colors={colorPalettes.map(p => p.hex)}
                     onChange={(color) => setFillColor2(color.hex)}
                   />
                 </div>
@@ -134,7 +156,7 @@ export default function SettingsPage() {
                 <div className={styles.colorGrid}>
                   <Circle
                     color={strokeColor2}
-                    colors={colorPalettes.map(p=> p.hex)}
+                    colors={colorPalettes.map(p => p.hex)}
                     onChange={(color) => setStrokeColor2(color.hex)}
                   />
                 </div>
@@ -151,7 +173,7 @@ export default function SettingsPage() {
                 <div className={styles.colorGrid}>
                   <Circle
                     color={fillColor3}
-                    colors={colorPalettes.map(p=> p.hex)}
+                    colors={colorPalettes.map(p => p.hex)}
                     onChange={(color) => setFillColor3(color.hex)}
                   />
                 </div>
@@ -161,7 +183,7 @@ export default function SettingsPage() {
                 <div className={styles.colorGrid}>
                   <Circle
                     color={strokeColor3}
-                    colors={colorPalettes.map(p=> p.hex)}
+                    colors={colorPalettes.map(p => p.hex)}
                     onChange={(color) => setStrokeColor3(color.hex)}
                   />
                 </div>
@@ -170,8 +192,8 @@ export default function SettingsPage() {
           </div>
 
           {/* SVG Preview */}
-          <div className={styles.box}>
-            <svg width="900" height="500" xmlns="http://www.w3.org/2000/svg" >
+          <div className="flex flex-col">
+            <svg width="500" height="500" xmlns="http://www.w3.org/2000/svg" >
               {/* Path 1 */}
               <path
                 d="M 50 50 L 150 50 L 150 150 L 50 150 Z"
@@ -300,7 +322,7 @@ export default function SettingsPage() {
             <Circle
               className=""
               color={fillColor}
-              colors={colorPalettes.map(p=>p.hex)}
+              colors={colorPalettes.map(p => p.hex)}
               // {['#FFDA76', '#FF8C9E', '#FF4E88', '#ffb6b1', '#ffc0cb']}
               onChange={(color) => setFillColor(color.hex)}
             />
@@ -310,7 +332,7 @@ export default function SettingsPage() {
           <div className={styles.colorGrid}>
             <Circle
               color={strokeColor}
-              colors={colorPalettes.map(p=>p.hex)}
+              colors={colorPalettes.map(p => p.hex)}
               // {['#66cdaa', '#008000', '#00ced1', '#b4eeb4', '#088da5']}
               onChange={(color) => setStrokeColor(color.hex)}
             />

@@ -89,7 +89,7 @@ export default function SettingsPage() {
             <h2 className="text-lg font-semibold mb-2">Front Wall</h2>
             <div className="flex gap-6 flex-wrap">
               <div className="w-36">
-                <label className="block mb-2">Fill Color:</label>
+                <label className="block mb-2">Wall:</label>
                 <div className={styles.colorGrid}>
                   <Circle
                     color={fillColor1}
@@ -101,7 +101,7 @@ export default function SettingsPage() {
                 </div>
               </div>
               <div className="w-36">
-                <label className="block mb-2">Stroke Color:</label>
+                <label className="block mb-2">Trim:</label>
                 <div className={styles.colorGrid}>
                   <Circle
                     color={strokeColor1}
@@ -120,7 +120,7 @@ export default function SettingsPage() {
             <h2 className="text-lg font-semibold mb-2">Ceiling</h2>
             <div className="flex gap-6 flex-wrap">
               <div className="w-36">
-                <label className="block mb-2">Fill Color:</label>
+                <label className="block mb-2">Wall:</label>
                 <div className={styles.colorGrid}>
                   <Circle
                     color={fillColor2}
@@ -130,7 +130,7 @@ export default function SettingsPage() {
                 </div>
               </div>
               <div className="w-36">
-                <label className="block mb-2">Stroke Color:</label>
+                <label className="block mb-2">Trim:</label>
                 <div className={styles.colorGrid}>
                   <Circle
                     color={strokeColor2}
@@ -147,7 +147,7 @@ export default function SettingsPage() {
             <h2 className="text-lg font-semibold mb-2">Right Wall</h2>
             <div className="flex gap-6 flex-wrap">
               <div className="w-36">
-                <label className="block mb-2">Fill Color:</label>
+                <label className="block mb-2">Wall:</label>
                 <div className={styles.colorGrid}>
                   <Circle
                     color={fillColor3}
@@ -157,7 +157,7 @@ export default function SettingsPage() {
                 </div>
               </div>
               <div className="w-36">
-                <label className="block mb-2">Stroke Color:</label>
+                <label className="block mb-2">Trim:</label>
                 <div className={styles.colorGrid}>
                   <Circle
                     color={strokeColor3}
@@ -306,7 +306,7 @@ export default function SettingsPage() {
             />
           </div></div>
         <div className="w-36">
-          <label className="block mb-2">Stroke Color:</label>
+          <label className="block mb-2">Trim:</label>
           <div className={styles.colorGrid}>
             <Circle
               color={strokeColor}

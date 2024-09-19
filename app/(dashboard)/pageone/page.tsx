@@ -78,14 +78,14 @@ export default function SettingsPage() {
   };
 
   return (
-    <div className="flex flex-col">
+    <div className="pageOne">
      
-      <div className="flex mb-4 bg-gradient-to-r from-[#FBD073] to-[#E5DBE5] max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex-none justify-between p-4 leading-normal ">
-        <div className="">
-          <h1 className="text-2xl font-bold mb-4">Paint Color Visualizer</h1>
+      {/* <div className="flex mb-4 bg-gradient-to-r from-[#FBD073] to-[#E5DBE5] max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex-d justify-between p-4 leading-normal"> */}
+        <div className="colorVisualizer">
+          <h1 className="header">Paint Color Visualizer</h1>
 
           {/* SVG 1 Color Pickers */}
-          <div className="flex flex-col items-center">
+          <div className="flex flex-row items-left">
             <h2 className="text-lg font-semibold mb-2">Front Wall</h2>
             <div className="flex gap-6 flex-wrap">
               <div className="w-36">
@@ -111,7 +111,7 @@ export default function SettingsPage() {
                   // onChange={(color) => setStrokeColor1(color.hex)}
                   />
                 </div>
-              </div>
+              {/* </div> */}
             </div>
           </div>
 

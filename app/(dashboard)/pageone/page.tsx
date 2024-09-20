@@ -95,8 +95,6 @@ export default function SettingsPage() {
                     color={fillColor1}
                     colors={colorPalettes.map(palette => palette.hex)}
                     onChange={(color) => setFillColor1(color.hex)}
-                  // colors={colorPalette}
-                  // onChange={(color) => setFillColor1(color.hex)}
                   />
                 </div>
               </div>
@@ -107,11 +105,8 @@ export default function SettingsPage() {
                     color={strokeColor1}
                     colors={colorPalettes.map(p => p.hex)}
                     onChange={(color) => setStrokeColor1(color.hex)}
-                  // colors={colorPalette}
-                  // onChange={(color) => setStrokeColor1(color.hex)}
                   />
                 </div>
-              {/* </div> */}
             </div>
           </div>
 

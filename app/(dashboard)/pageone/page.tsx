@@ -79,23 +79,20 @@ export default function SettingsPage() {
 
   return (
     <div className="border-2 border-purple-800"> Page
-
-      {/* <div className="flex mb-4 bg-gradient-to-r from-[#FBD073] to-[#E5DBE5] max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex-d justify-between p-4 leading-normal"> */}
-        <div className="border-2 border-blue-900"> Border
-          <h1 className="border-2 border-rose-100">Paint Color Visualizer</h1>
-          {/* SVG 1 Color Pickers */}
-          <div className="flex flex-row items-center border-2 border-purple-100">Color Pickers
-            <h2 className="text-lg font-semibold mb-2 border-2 border-yellow-100">Front Wall</h2>
+      <div className="border-2 border-blue-900"> Wall Color Inputs and Display
+        <div className="flex flex-row items-center border-2 border-green-700">Color Pickers
+          <div className="mb-6">
+            <h2 className="text-lg font-semibold mb-2 border-2 border-yellow-900">Front Wall</h2>
             <div className="flex gap-6 flex-wrap border-2 border-purple-100 ">
               <div className="w-36 border-2 border-bloe-100">
                 <label className="block mb-2 border-2 border-red-100">Wall:</label>
-                {/* <div className="border-2 border-blue-100"> Grid */}
+                <div className={styles.colorGrid}>
                   <Circle
                     color={fillColor1}
                     colors={colorPalettes.map(palette => palette.hex)}
                     onChange={(color) => setFillColor1(color.hex)}
                   />
-                {/* </div> */}
+                </div>
               </div>
               <div className="w-36">
                 <label className="block mb-2">Trim:</label>
@@ -108,94 +105,87 @@ export default function SettingsPage() {
                 </div>
               </div>
             </div>
+          </div>
 
-            {/* SVG 2 Color Pickers */}
-            <div className="mb-6">
-              <h2 className="text-lg font-semibold mb-2">Ceiling</h2>
-              <div className="flex gap-6 flex-wrap">
-                <div className="w-36">
-                  <label className="block mb-2">Wall:</label>
-                  <div className={styles.colorGrid}>
-                    <Circle
-                      color={fillColor2}
-                      colors={colorPalettes.map(p => p.hex)}
-                      onChange={(color) => setFillColor2(color.hex)}
-                    />
-                  </div>
+          <div className="mb-6">
+            <h2 className="text-lg font-semibold mb-2 border-2 border-yellow-900">Ceiling</h2>
+            <div className="flex gap-6 flex-wrap">
+              <div className="w-36">
+                <label className="block mb-2">Wall:</label>
+                <div className={styles.colorGrid}>
+                  <Circle
+                    color={fillColor2}
+                    colors={colorPalettes.map(p => p.hex)}
+                    onChange={(color) => setFillColor2(color.hex)}
+                  />
                 </div>
-                <div className="w-36">
-                  <label className="block mb-2">Trim:</label>
-                  <div className={styles.colorGrid}>
-                    <Circle
-                      color={strokeColor2}
-                      colors={colorPalettes.map(p => p.hex)}
-                      onChange={(color) => setStrokeColor2(color.hex)}
-                    />
-                  </div>
+              </div>
+              <div className="w-36">
+                <label className="block mb-2">Trim:</label>
+                <div className={styles.colorGrid}>
+                  <Circle
+                    color={strokeColor2}
+                    colors={colorPalettes.map(p => p.hex)}
+                    onChange={(color) => setStrokeColor2(color.hex)}
+                  />
                 </div>
               </div>
             </div>
+          </div>
 
-            {/* SVG 3 Color Pickers */}
-            <div className="mb-6">
-              <h2 className="text-lg font-semibold mb-2">Right Wall</h2>
-              <div className="flex gap-6 flex-wrap">
-                <div className="w-36">
-                  <label className="block mb-2">Wall:</label>
-                  <div className={styles.colorGrid}>
-                    <Circle
-                      color={fillColor3}
-                      colors={colorPalettes.map(p => p.hex)}
-                      onChange={(color) => setFillColor3(color.hex)}
-                    />
-                  </div>
-                </div>
-                <div className="w-36">
-                  <label className="block mb-2">Trim:</label>
-                  <div className={styles.colorGrid}>
-                    <Circle
-                      color={strokeColor3}
-                      colors={colorPalettes.map(p => p.hex)}
-                      onChange={(color) => setStrokeColor3(color.hex)}
-                    />
-                  </div>
+          <div className="mb-6">
+            <h2 className="text-lg font-semibold mb-2 border-2 border-yellow-900">Right Wall</h2>
+            <div className="flex gap-6 flex-wrap">
+              <div className="w-36">
+                <label className="block mb-2">Wall:</label>
+                <div className={styles.colorGrid}>
+                  <Circle
+                    color={fillColor3}
+                    colors={colorPalettes.map(p => p.hex)}
+                    onChange={(color) => setFillColor3(color.hex)}
+                  />
                 </div>
               </div>
-      
-
-            {/* SVG Preview */}
-            <div className="flex flex-col">
-              <svg width="500" height="500" xmlns="http://www.w3.org/2000/svg" >
-                {/* Path 1 */}
-                <path
-                  d="M 50 50 L 150 50 L 150 150 L 50 150 Z"
-                  fill={fillColor1}
-                  stroke={strokeColor1}
-                  strokeWidth={strokeWidth}
-                />
-                {/* Path 2 */}
-                <path
-                  d="M 50 50 L 100 20 L 200 20 L 150 50 Z"
-                  fill={fillColor2}
-                  stroke={strokeColor2}
-                  strokeWidth={strokeWidth}
-                />
-                {/* Path 3 */}
-                <path
-                  d="M 150 50 L 200 20 L 200 120 L 150 150 Z"
-                  fill={fillColor3}
-                  stroke={strokeColor3}
-                  strokeWidth={strokeWidth}
-                />
-              </svg>
+              <div className="w-36">
+                <label className="block mb-2">Trim:</label>
+                <div className={styles.colorGrid}>
+                  <Circle
+                    color={strokeColor3}
+                    colors={colorPalettes.map(p => p.hex)}
+                    onChange={(color) => setStrokeColor3(color.hex)}
+                  />
+                </div>
+              </div>
             </div>
+          </div>
+
+
+          {/* SVG Preview */}
+          <div className="flex flex-col border-6 border-aqua-900 justify-self-auto"> Wall Preview with Your Colors
+            <svg width="500" height="500" xmlns="http://www.w3.org/2000/svg" >
+              <path
+                d="M 50 50 L 150 50 L 150 150 L 50 150 Z"
+                fill={fillColor1}
+                stroke={strokeColor1}
+                strokeWidth={strokeWidth}
+              />
+              <path
+                d="M 50 50 L 100 20 L 200 20 L 150 50 Z"
+                fill={fillColor2}
+                stroke={strokeColor2}
+                strokeWidth={strokeWidth}
+              />
+              <path
+                d="M 150 50 L 200 20 L 200 120 L 150 150 Z"
+                fill={fillColor3}
+                stroke={strokeColor3}
+                strokeWidth={strokeWidth}
+              />
+            </svg>
           </div>
         </div>
       </div>
-
-
       <h1 className="text-2xl font-bold mb-4 border-2 border-yellow-100 ">SVG Shape Generator</h1>
-      {/* Control Point 1 Inputs */}
       <div className="flex gap-4 mb-4">
         <div>
           <label className="block mb-2">Control Point 1 X:</label>

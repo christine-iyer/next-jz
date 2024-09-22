@@ -26,7 +26,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} p-10 h-screen w-screen`}>
         <header className="mb-20">
-          <nav>
+          <nav style={{color: "red"}}>
             <ul className="flex items-center">
               {links.map(({ href, label }) => (
                 <li key={href} className="px-4 text-2xl">

@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Papa from 'papaparse';
-import { tidy, summarize, sum, n, mean } from '@tidyjs/tidy';
+import { tidy, summarize, sum, n, mean,groupBy } from '@tidyjs/tidy';
 import styles from './page.module.css';
 const SenateTally = () => {
   const [totalPct, setTotalPct] = useState(null);
@@ -56,9 +56,9 @@ const SenateTally = () => {
     // Use tidy.js to count the number of records
     const tally = tidy(
       csvData,
-      summarize({
-        recordCount: n(), // Count the number of rows
-      })
+      groupBy('candidate_name', [, // Group by'state' column to count records per state
+      summarize({ recordCount: n(), // Count the number of rows
+      })])
     );
 
     setRecordCount(tally[0].recordCount);

@@ -8,10 +8,18 @@ const SenateTally = () => {
   const [totalPct, setTotalPct] = useState(null);
   const [recordCount, setRecordCount] = useState(null);
   const [csvData, setCsvData] = useState(null); // Store the parsed CSV data
-
+const responseData = [
+  './senateHistorical.csv', 
+  './senatePresent.csv', 
+  './genericBallotPollsHistorical.csv']
+const getRandomFile=(arr)=> {
+  const randomIndex = Math.floor(Math.random()* arr.length)
+  return arr[randomIndex]
+}
+const randomFile = getRandomFile(responseData);
   const handleFetchAndParse = () => {
     // Fetch the CSV file from the public folder
-    fetch('./senateHistorical.csv')
+    fetch(getRandomFile(responseData))
       .then((response) => response.text())
       .then((csvData) => {
         // Parse the CSV data using PapaParse
@@ -30,7 +38,7 @@ const SenateTally = () => {
       .catch((error) => console.error('Error fetching the file:', error));
   };
 
-  const handleTallyPct = () => {
+  const handleCalculatePct = () => {
     if (!csvData) {
       alert('Please load the data first.');
       return;
@@ -69,9 +77,9 @@ const SenateTally = () => {
       <h2>Tally Data from Senate Historical CSV</h2>
       <button className={styles.button} onClick={handleFetchAndParse}>Load Data</button>
       <br /><br />
-      <button className={styles.button} onClick={handleTallyPct} disabled={!csvData}>Tally Pct Column</button>
+      <button className={styles.button} onClick={handleCalculatePct} disabled={!csvData}>Tally Pct Column</button>
       <button className={styles.button} onClick={handleCountRecords} disabled={!csvData}>Count Records</button>
-      {totalPct !== null && <p>Total Pct: {totalPct.toFixed(0)}</p>}
+      {totalPct !== null && <p>Total Pct: {totalPct.toFixed(0)} %</p>}
       {recordCount !== null && <p>Record Count: {recordCount}</p>}
     </div>
   );

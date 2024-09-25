@@ -1,6 +1,6 @@
 "use client";
 
- import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import * as d3 from 'd3';
 import Papa from 'papaparse';
 
@@ -22,11 +22,13 @@ const TimeSeriesChart = () => {
           header: true,
           skipEmptyLines: true,
           complete: (results) => {
-            const parsedData = results.data.map((d) => ({
-              ...d,
-              pct: parseFloat(d.pct) || 0,
-              end_date: new Date(d.end_date),
-            }));
+            const parsedData = results.data
+              .map((d) => ({
+                ...d,
+                pct: parseFloat(d.pct) || 0, // Ensure pct is treated as a number
+                end_date: new Date(d.end_date),
+              }))
+              .filter((d) => ['DEM', 'REP', 'IND'].includes(d.party)); // Static filter for DEM, REP, IND
             setData(parsedData);
             setFilteredData(parsedData); // Initially, set filteredData to all data
           },
@@ -90,6 +92,17 @@ const TimeSeriesChart = () => {
       .x((d) => x(new Date(0, d.end_date.getMonth())))
       .y((d) => y(d.pct));
 
+    // Tooltip for candidate and election details
+    const tooltip = d3
+      .select('body')
+      .append('div')
+      .style('position', 'absolute')
+      .style('visibility', 'hidden')
+      .style('background', '#f9f9f9')
+      .style('padding', '10px')
+      .style('border', '1px solid #ccc')
+      .style('border-radius', '5px');
+
     // Append SVG and g element
     svg
       .attr('width', width + margin.left + margin.right)
@@ -128,6 +141,34 @@ const TimeSeriesChart = () => {
       .attr('stroke', 'steelblue')
       .attr('stroke-width', 1.5)
       .attr('d', line);
+
+    // Plot circles for each data point
+    svg
+      .selectAll('circle')
+      .data(data)
+      .enter()
+      .append('circle')
+      .attr('cx', (d) => x(new Date(0, d.end_date.getMonth())) + margin.left)
+      .attr('cy', (d) => y(d.pct) + margin.top)
+      .attr('r', 5)
+      .attr('fill', 'steelblue')
+      .on('mouseover', (event, d) => {
+        tooltip
+          .html(
+            `<strong>Candidate:</strong> ${d.candidate_name}<br><strong>Party:</strong> ${d.party}<br><strong>Cycle:</strong> ${d.cycle}<br><strong>Pct:</strong> ${d.pct}<br><strong>Date:</strong> ${d3.timeFormat(
+              '%B %d, %Y'
+            )(d.end_date)}`
+          )
+          .style('visibility', 'visible');
+      })
+      .on('mousemove', (event) => {
+        tooltip
+          .style('top', event.pageY - 50 + 'px')
+          .style('left', event.pageX + 10 + 'px');
+      })
+      .on('mouseout', () => {
+        tooltip.style('visibility', 'hidden');
+      });
   };
 
   return (

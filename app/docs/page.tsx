@@ -225,7 +225,6 @@ import Papa from 'papaparse';
 const PollTable = () => {
   const [pollData, setPollData] = useState([]);
   const [groupedData, setGroupedData] = useState([]);
-
   const [cycle, setCycle] = useState('All');
   const [party, setParty] = useState('All');
   const [candidate, setCandidate] = useState('All');
@@ -244,9 +243,9 @@ const PollTable = () => {
               pct: parseFloat(d.pct) || 0, // Ensure pct is treated as a number
               end_date: new Date(d.end_date),
             }))
-            .filter((d) => ['DEM', 'REP', 'IND'].includes(d.party)); // Static filter for DEM, REP, IND
-           
-            
+              .filter((d) => ['DEM', 'REP', 'IND'].includes(d.party)); // Static filter for DEM, REP, IND
+
+
             setPollData(parsedData);
           },
         });
@@ -275,7 +274,7 @@ const PollTable = () => {
     // Use Tidy.js to group and summarize the filtered data
     const output = tidy(
       filteredData,
-      groupBy(['candidate_name', 'office_type', 'end_date', 'pollster'], [
+      groupBy(['poll_id', 'end_date', 'candidate_name', 'office_type', 'pollster'], [
         summarize({
           n: n(),
           average: mean('pct'),
@@ -340,7 +339,8 @@ const PollTable = () => {
         <tbody>
           {groupedData.map((row, idx) => (
             <tr key={idx}>
-              <td>{row.candidate_name}</td>
+              <td style={{ border: "red" }}>{row.poll_id}</td>
+              <td style={{ border: "red" }}>{row.candidate_name}</td>
               <td>{row.office_type}</td>
               <td>{row.end_date.toDateString()}</td>
               <td>{row.pollster}</td>

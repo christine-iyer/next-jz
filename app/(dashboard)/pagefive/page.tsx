@@ -113,7 +113,7 @@ const Map = () => {
           .duration(200)
           .style("opacity", 1);
         tooltip
-          .html(`<strong>${stateName}</strong><br>Population: ${population}`)
+          .html(`<strong>${stateName}</strong><br>Population: ${population.toLocaleString()}`)
           .style("left", (event.pageX + 10) + "px")
           .style("top", (event.pageY - 28) + "px");
 

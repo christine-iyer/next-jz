@@ -1,9 +1,16 @@
+
+
 "use client"; // Add this line at the top to make it a client component
 import React, { useEffect } from "react";
 import * as d3 from "d3";
 import usStates from '../../data/states.json'; // Your GeoJSON data for US states
 
-// Example population data for states
+// Your merged data array with population and electoral votes
+// const mergedArray = Object.keys(stateElectorate).map(state => ({
+//   stateName: state,
+//   electoralVotes: stateElectorate[state],
+//   population: statePopulation[state] || 'Unknown'
+// }));
 const statePopulation = {
   'Alabama': 4903185,
   'Alaska': 731545,
@@ -118,8 +125,7 @@ const mergedArray = Object.keys(stateElectorate).map(state => ({
   population: statePopulation[state] || 'Unknown'
 }));
 
-
-const Map = () => {
+const USMap = () => {
   useEffect(() => {
     const width = 960;
     const height = 600;
@@ -132,8 +138,11 @@ const Map = () => {
     const projection = d3.geoAlbersUsa().scale(1000).translate([width / 2, height / 2]);
     const path = d3.geoPath().projection(projection);
 
-    // Color scale for population (light to dark)
-    const populationValues = Object.values(stateElectorate);
+    // Create a mapping for the states from mergedArray for quick lookup
+    const stateDataMap = new Map(mergedArray.map(d => [d.stateName, d]));
+
+    // Color scale for population (or electoral votes)
+    const populationValues = mergedArray.map(d => d.population).filter(d => d !== 'Unknown');
     const colorScale = d3.scaleLinear()
       .domain([d3.min(populationValues), d3.max(populationValues)])
       .range(["#e41bd0", "#9416e9"]);
@@ -158,27 +167,35 @@ const Map = () => {
       .attr("d", path)
       .attr("fill", (d) => {
         const stateName = d.properties.NAME;
-        const population = stateElectorate[stateName] || 0;
-        return colorScale(population);
+        const stateData = stateDataMap.get(stateName);
+
+        // Use population for color scaling if available, else default color
+        return stateData ? colorScale(stateData.population) : "#ccc";
       })
       .attr("stroke", "#a45b8e")
       .attr("stroke-width", 1.5)
       .on("mouseover", function (event, d) {
         const stateName = d.properties.NAME;
-        const population = stateElectorate[stateName] || "Unknown";
+        const stateData = stateDataMap.get(stateName);
 
-        tooltip
-          .transition()
-          .duration(200)
-          .style("opacity", 1);
-        tooltip
-          .html(`<strong>${stateName}</strong><br>Population: ${population.toLocaleString()}`)
-          .style("left", (event.pageX + 10) + "px")
-          .style("top", (event.pageY - 28) + "px");
+        if (stateData) {
+          tooltip
+            .transition()
+            .duration(200)
+            .style("opacity", 1);
+          tooltip
+            .html(`
+              <strong>${stateName}</strong><br>
+              Population: ${stateData.population.toLocaleString()}<br>
+              Electoral Votes: ${stateData.electoralVotes}
+            `)
+            .style("left", (event.pageX + 10) + "px")
+            .style("top", (event.pageY - 28) + "px");
 
-        d3.select(this)
-          .attr("stroke", "#333")
-          .attr("stroke-width", 3);  // Highlight the state boundary
+          d3.select(this)
+            .attr("stroke", "#333")
+            .attr("stroke-width", 3);  // Highlight the state boundary
+        }
       })
       .on("mousemove", (event) => {
         tooltip
@@ -192,7 +209,7 @@ const Map = () => {
           .style("opacity", 0);
 
         d3.select(this)
-          .attr("stroke", "#fff")
+          .attr("stroke", "#a45b8e")
           .attr("stroke-width", 1.5);  // Reset the state boundary style
       });
 
@@ -201,8 +218,4 @@ const Map = () => {
   return <div id="map"></div>;
 };
 
-export default Map;
-
-
-
-
+export default USMap;

@@ -58,6 +58,7 @@ const statePopulation = {
   'Wyoming': 578759
 
 };
+
 const stateElectorate = {
   'Alabama': 9,
   'Alaska': 3,
@@ -67,7 +68,7 @@ const stateElectorate = {
   'Colorado': 10,
   'Connecticut': 7,
   'Delaware': 3,
-  'District': 3,
+  'District of Columbia': 3,
   'Florida': 30,
   'Georgia': 16,
   'Hawaii': 4,
@@ -111,6 +112,11 @@ const stateElectorate = {
 'Wisconsin': 10,
   'Wyoming': 3
 }
+const mergedArray = Object.keys(stateElectorate).map(state => ({
+  stateName: state,
+  electoralVotes: stateElectorate[state],
+  population: statePopulation[state] || 'Unknown'
+}));
 
 
 const Map = () => {

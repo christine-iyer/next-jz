@@ -97,32 +97,34 @@ const stateElectorate = {
   'Nebraska': 5,
   'Nevada': 6,
   'New Hampshire': 4,
-'New Jersey': 14,
-'New Mexico': 5,
-'New York': 28,
-'North Carolina': 16,
-'North Dakota': 3,
-'Ohio': 17,
+  'New Jersey': 14,
+  'New Mexico': 5,
+  'New York': 28,
+  'North Carolina': 16,
+  'North Dakota': 3,
+  'Ohio': 17,
   'Oklahoma': 7,
   'Oregon': 8,
   'Pennsylvania': 19,
   'Rhode Island': 4,
-'South Carolina': 9,
-'South Dakota': 3,
-'Tennessee': 11,
+  'South Carolina': 9,
+  'South Dakota': 3,
+  'Tennessee': 11,
   'Texas': 40,
   'Utah': 6,
   'Vermont': 3,
   'Virginia': 13,
   'Washington': 12,
   'West Virginia': 4,
-'Wisconsin': 10,
+  'Wisconsin': 10,
   'Wyoming': 3
 }
 const mergedArray = Object.keys(stateElectorate).map(state => ({
   stateName: state,
   electoralVotes: stateElectorate[state],
-  population: statePopulation[state] || 'Unknown'
+  population: statePopulation[state] || 'Unknown',
+  ratioOne: statePopulation[state] * (stateElectorate[state]-2),
+  ratioTwo: (stateElectorate[state]-2) / statePopulation[state] * 100000
 }));
 
 const USMap = () => {
@@ -187,8 +189,11 @@ const USMap = () => {
             .html(`
               <strong>${stateName}</strong><br>
               Population: ${stateData.population.toLocaleString()}<br>
-              Electoral Votes: ${stateData.electoralVotes}
-            `)
+              Electoral Votes: ${stateData.electoralVotes}<br>
+              ratioOne: ${stateData.ratioOne.toFixed(2)}<br>
+              ratioTwo: ${stateData.ratioTwo.toFixed(6)}
+              
+`)
             .style("left", (event.pageX + 10) + "px")
             .style("top", (event.pageY - 28) + "px");
 

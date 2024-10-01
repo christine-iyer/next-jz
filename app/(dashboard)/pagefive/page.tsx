@@ -147,7 +147,7 @@ const USMap = () => {
     const populationValues = mergedArray.map(d => d.population).filter(d => d !== 'Unknown');
     const colorScale = d3.scaleLinear()
       .domain([d3.min(populationValues), d3.max(populationValues)])
-      .range(["#e41bd0", "#9416e9"]);
+      .range(["#d0e562", "#93c48b"]);
 
     // Tooltip element
     const tooltip = d3.select("body")

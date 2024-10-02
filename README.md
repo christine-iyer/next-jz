@@ -24,3 +24,13 @@ rgb(207, 194, 145),
 rgb(173,94,101),
 rgb(185,178,146)]
 
+### Sample dataset. 
+
+poll_id,pollster,numeric_grade,pollscore,methodology,transparency_score,state,end_date,sample_size,cycle,office_type,election_date,party,candidate_name,pct
+88369,ActiVote,,,App Panel,8,New York,9/25/24,400,2024,U.S. Senate,11/5/24,DEM,Kirsten E. Gillibrand,59.7
+88369,ActiVote,,,App Panel,8,New York,6/2/23,400,2024,U.S. Senate,11/5/24,REP,Michael D. Sapraicone,40.3
+88364,Emerson,2.9,-1.1,Online Panel/Text-to-Web,7,Texas,7/4/22,950,2024,U.S. Senate,11/5/24,DEM,Colin Allred,44.9
+88364,Emerson,2.9,-1.1,Online Panel/Text-to-Web,7,Texas,2/24/21,950,2024,U.S. Senate,11/5/24,REP,Ted Cruz,48.9
+88365,Emerson,2.9,-1.1,Online Panel/Text-to-Web,7,Virginia,9/24/20,860,2024,U.S. Senate,11/5/24,DEM,Timothy Michael Kaine,51.1
+88365,Emerson,2.9,-1.1,Online Panel/Text-to-Web,7,Virginia,4/24/19,860,2024,U.S. Senate,11/5/24,REP,Hung Cao,41.2
+

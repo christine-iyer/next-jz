@@ -34,3 +34,46 @@ poll_id,pollster,numeric_grade,pollscore,methodology,transparency_score,state,en
 88365,Emerson,2.9,-1.1,Online Panel/Text-to-Web,7,Virginia,9/24/20,860,2024,U.S. Senate,11/5/24,DEM,Timothy Michael Kaine,51.1
 88365,Emerson,2.9,-1.1,Online Panel/Text-to-Web,7,Virginia,4/24/19,860,2024,U.S. Senate,11/5/24,REP,Hung Cao,41.2
 
+### JS to format the date
+```javascript
+const data = [
+  {
+    poll_id: 88369,
+    pollster: "ActiVote",
+    end_date: "9/25/24",
+    // other fields...
+  },
+  {
+    poll_id: 88364,
+    pollster: "Emerson",
+    end_date: "7/4/22",
+    // other fields...
+  },
+  // Add more data here...
+];
+
+// Helper function to parse date and adjust for custom week start (Tuesday)
+function getWeekNumberFromDate(dateString) {
+  // Parse the date string (assuming MM/DD/YY format)
+  const [month, day, year] = dateString.split("/").map(Number);
+  let date = new Date(2000 + year, month - 1, day); // Convert YY to YYYY
+
+  // Adjust the date so the week starts on Tuesday
+  const dayOfWeek = date.getDay();
+  const diff = (dayOfWeek === 0 ? -6 : 2) - dayOfWeek; // Adjust to Tuesday
+  date.setDate(date.getDate() + diff);
+
+  // Calculate the week number based on adjusted date
+  const startOfYear = new Date(date.getFullYear(), 0, 1); // Jan 1st of the year
+  const pastDaysOfYear = (date - startOfYear) / 86400000; // Convert ms to days
+  return Math.ceil((pastDaysOfYear + startOfYear.getDay() + 1) / 7);
+}
+
+// Map through data and add a new field for week number
+const updatedData = data.map((item) => {
+  const weekNumber = getWeekNumberFromDate(item.end_date);
+  return { ...item, week_number: weekNumber };
+});
+
+console.log(updatedData);
+```

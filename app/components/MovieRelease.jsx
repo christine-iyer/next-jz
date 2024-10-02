@@ -102,7 +102,7 @@ const MovieRelease = () => {
 
   return (
     <div>
-      <button onClick={processMovieData}>
+      <button onClick={processMovieData} style={{ border: '2px solid green', color: 'yellow',  padding: '10px 20px', borderRadius: '5px' }}>
         Do This Thing
       </button>
 

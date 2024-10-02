@@ -68,8 +68,13 @@ const MovieRelease = () => {
         'https://gist.githubusercontent.com/sxywu/b94eb86c807b05080d7ee470bd1e815c/raw/8e53eb03f1ff95d53074b854e4be8b9494b3797f/110_movies.json'
       );
       const processedData = await response.json();
+           // Filter the data for years 2008 and 2018
+           const filteredData = _.filter(processedData, (d) => {
+               const releaseYear = new Date(d.Released).getFullYear();
+               return releaseYear === 2008 || releaseYear === 2013;
+             });
 
-      const releaseMonth = _.map(processedData, d => {
+      const releaseMonth = _.map(filteredData, d => {
         // Extract date and year, and convert the date to an ISO string for serialization
         const releaseDate = new Date(d.Released);
         return {

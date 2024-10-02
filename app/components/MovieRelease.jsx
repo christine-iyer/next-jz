@@ -71,7 +71,7 @@ const MovieRelease = () => {
            // Filter the data for years 2008 and 2018
            const filteredData = _.filter(processedData, (d) => {
                const releaseYear = new Date(d.Released).getFullYear();
-               return releaseYear === 2008 || releaseYear === 2013;
+               return releaseYear === 2008 || releaseYear === 2004;
              });
 
       const releaseMonth = _.map(filteredData, d => {

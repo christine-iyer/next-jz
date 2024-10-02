@@ -1,5 +1,3 @@
-
-
 "use client"; // Add this line at the top to make it a client component
 import React, { useEffect } from "react";
 import * as d3 from "d3";

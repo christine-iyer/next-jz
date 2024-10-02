@@ -20,6 +20,7 @@ export default function RootLayout({
     { href: '/pagethree', label: 'Page Three' },
     { href: '/pagefour', label: 'Page Four' },
     { href: '/pagefive', label: 'Maps' },
+    { href: '/pagesix', label: 'EDA' },
     { href: '/docs', label: 'Docs' },
   ]
 

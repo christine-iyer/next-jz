@@ -13,13 +13,17 @@
     "@tidyjs/tidy": "^2.5.2",
     "@uiw/react-color": "^2.3.0",
     "d3": "^7.9.0",
+    "lodash": "^4.17.21",
     "next": "14.2.5",
     "papaparse": "^5.4.1",
     "react": "^18",
     "react-dom": "^18",
     "react-pivottable": "^0.11.0",
     "react-table": "^7.8.0",
-    "react-toastify": "^10.0.5"
+    "react-toastify": "^10.0.5",
+    "react-vega": "^7.6.0",
+    "vega": "^5.30.0",
+    "vega-lite": "^5.21.0"
   },
   "devDependencies": {
     "@types/node": "22.3.0",

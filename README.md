@@ -54,26 +54,18 @@ const data = [
 
 // Helper function to parse date and adjust for custom week start (Tuesday)
 function getWeekNumberFromDate(dateString) {
-  // Parse the date string (assuming MM/DD/YY format)
   const [month, day, year] = dateString.split("/").map(Number);
-  let date = new Date(2000 + year, month - 1, day); // Convert YY to YYYY
-
-  // Adjust the date so the week starts on Tuesday
+  let date = new Date(2000 + year, month - 1, day); 
   const dayOfWeek = date.getDay();
-  const diff = (dayOfWeek === 0 ? -6 : 2) - dayOfWeek; // Adjust to Tuesday
+  const diff = (dayOfWeek === 0 ? -6 : 2) - dayOfWeek;
   date.setDate(date.getDate() + diff);
-
-  // Calculate the week number based on adjusted date
-  const startOfYear = new Date(date.getFullYear(), 0, 1); // Jan 1st of the year
-  const pastDaysOfYear = (date - startOfYear) / 86400000; // Convert ms to days
+  const startOfYear = new Date(date.getFullYear(), 0, 1);
+  const pastDaysOfYear = (date - startOfYear) / 86400000; 
   return Math.ceil((pastDaysOfYear + startOfYear.getDay() + 1) / 7);
 }
-
-// Map through data and add a new field for week number
 const updatedData = data.map((item) => {
   const weekNumber = getWeekNumberFromDate(item.end_date);
   return { ...item, week_number: weekNumber };
 });
-
 console.log(updatedData);
 ```

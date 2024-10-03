@@ -115,7 +115,7 @@ export default function Home() {
           placeholder="Enter a word"
           style={{ padding: '10px', width: '300px', marginRight: '10px' }}
         />
-        <button type="submit" style={{ padding: '10px' }}>
+        <button type="submit" style={{ border: '2px solid green', color: 'yellow',  padding: '10px 20px', borderRadius: '5px' }}>
           Search
         </button>
       </form>

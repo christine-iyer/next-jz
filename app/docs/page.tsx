@@ -50,7 +50,8 @@ const [cycle, setCycle] = useState('All');
 
     // Filter by party
     if (party !== 'All') {
-      filteredData = filteredData.filter((d) => d.party === party);
+      filteredData = filteredData.filter((d) => d.party === party)
+      
     }
 
     // Filter by candidate
@@ -60,6 +61,7 @@ const [cycle, setCycle] = useState('All');
     // Filter by pollster
     if (pollster !== 'All') {
       filteredData = filteredData.filter((d) => d.pollster === pollster);
+      filteredData = filteredData.sort((a, b) => a.localeCompare(b));
     }
 
     // Use Tidy.js to group and summarize the filtered data

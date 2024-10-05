@@ -1,4 +1,152 @@
 poll_id,pollster,numeric_grade,pollscore,methodology,transparency_score,state,end_date,sample_size,cycle,office_type,election_date,party,candidate_name,pct
+88490,Bullfinch,,,Online Panel,4.0,Nebraska,10/1/24,400,2024,U.S. Senate,11/5/24,REP,Deb Fischer,42.0
+88490,Bullfinch,,,Online Panel,4.0,Nebraska,10/1/24,400,2024,U.S. Senate,11/5/24,IND,Dan Osborn,47.0
+88478,ActiVote,,,App Panel,8.0,Missouri,10/1/24,400,2024,U.S. Senate,11/5/24,DEM,Lucas Kunce,46.0
+88478,ActiVote,,,App Panel,8.0,Missouri,10/1/24,400,2024,U.S. Senate,11/5/24,REP,Josh Hawley,54.0
+88504,Mitchell,2.4,-0.2,Text-to-Web,7.0,Michigan,9/30/24,709,2024,U.S. Senate,11/5/24,DEM,Elissa Slotkin,49.0
+88504,Mitchell,2.4,-0.2,Text-to-Web,7.0,Michigan,9/30/24,709,2024,U.S. Senate,11/5/24,REP,Mike Rogers,44.0
+88450,InsiderAdvantage,2.0,-0.3,Text,5.0,Arizona,9/30/24,800,2024,U.S. Senate,11/5/24,DEM,Ruben Gallego,49.6
+88450,InsiderAdvantage,2.0,-0.3,Text,5.0,Arizona,9/30/24,800,2024,U.S. Senate,11/5/24,REP,Kari Lake,43.1
+88451,InsiderAdvantage,2.0,-0.3,Text,5.0,Nevada,9/30/24,800,2024,U.S. Senate,11/5/24,DEM,Jacky S. Rosen,49.3
+88451,InsiderAdvantage,2.0,-0.3,Text,5.0,Nevada,9/30/24,800,2024,U.S. Senate,11/5/24,REP,Sam Brown,41.5
+88468,Trafalgar Group,0.7,0.6,IVR/Live Phone/Text/Online Panel/Email,4.0,Wisconsin,9/30/24,1079,2024,U.S. Senate,11/5/24,DEM,Tammy Baldwin,48.3
+88468,Trafalgar Group,0.7,0.6,IVR/Live Phone/Text/Online Panel/Email,4.0,Wisconsin,9/30/24,1079,2024,U.S. Senate,11/5/24,REP,Eric D. Hovde,46.0
+88484,Trafalgar Group,0.7,0.6,IVR/Live Phone/Text/Online Panel/Email,4.0,Michigan,9/30/24,1086,2024,U.S. Senate,11/5/24,DEM,Elissa Slotkin,47.4
+88484,Trafalgar Group,0.7,0.6,IVR/Live Phone/Text/Online Panel/Email,4.0,Michigan,9/30/24,1086,2024,U.S. Senate,11/5/24,REP,Mike Rogers,47.0
+88486,WPAi,1.7,-0.1,Live Phone,3.0,North Dakota,9/30/24,500,2024,U.S. Senate,11/5/24,DEM,Katrina Christiansen,29.0
+88486,WPAi,1.7,-0.1,Live Phone,3.0,North Dakota,9/30/24,500,2024,U.S. Senate,11/5/24,REP,Kevin Cramer,51.0
+88446,ActiVote,,,App Panel,8.0,Texas,9/30/24,400,2024,U.S. Senate,11/5/24,DEM,Colin Allred,47.6
+88446,ActiVote,,,App Panel,8.0,Texas,9/30/24,400,2024,U.S. Senate,11/5/24,REP,Ted Cruz,52.4
+88499,OnMessage Inc.,1.1,0.2,,1.0,Pennsylvania,9/29/24,800,2024,U.S. Senate,11/5/24,DEM,Robert P. Casey Jr.,45.0
+88499,OnMessage Inc.,1.1,0.2,,1.0,Pennsylvania,9/29/24,800,2024,U.S. Senate,11/5/24,REP,Dave McCormick,44.0
+88425,Patriot Polling,1.1,0.6,IVR,5.0,Pennsylvania,9/29/24,816,2024,U.S. Senate,11/5/24,DEM,Robert P. Casey Jr.,51.0
+88425,Patriot Polling,1.1,0.6,IVR,5.0,Pennsylvania,9/29/24,816,2024,U.S. Senate,11/5/24,REP,Dave McCormick,48.0
+88420,Trafalgar Group,0.7,0.6,IVR/Live Phone/Text/Online Panel/Email,4.0,Pennsylvania,9/29/24,1090,2024,U.S. Senate,11/5/24,DEM,Robert P. Casey Jr.,47.4
+88420,Trafalgar Group,0.7,0.6,IVR/Live Phone/Text/Online Panel/Email,4.0,Pennsylvania,9/29/24,1090,2024,U.S. Senate,11/5/24,REP,Dave McCormick,45.6
+88494,HighGround,1.8,-0.3,Live Phone,4.5,Arizona,9/29/24,500,2024,U.S. Senate,11/5/24,DEM,Ruben Gallego,51.2
+88494,HighGround,1.8,-0.3,Live Phone,4.5,Arizona,9/29/24,500,2024,U.S. Senate,11/5/24,REP,Kari Lake,41.4
+88421,ActiVote,,,App Panel,8.0,Wisconsin,9/29/24,400,2024,U.S. Senate,11/5/24,DEM,Tammy Baldwin,54.1
+88421,ActiVote,,,App Panel,8.0,Wisconsin,9/29/24,400,2024,U.S. Senate,11/5/24,REP,Eric D. Hovde,45.9
+88461,Emerson,2.9,-1.1,Online Panel/Text-to-Web,7.0,Arizona,9/28/24,920,2024,U.S. Senate,11/5/24,DEM,Ruben Gallego,52.2
+88461,Emerson,2.9,-1.1,Online Panel/Text-to-Web,7.0,Arizona,9/28/24,920,2024,U.S. Senate,11/5/24,REP,Kari Lake,40.8
+88465,Emerson,2.9,-1.1,Online Panel/Text-to-Web,7.0,Pennsylvania,9/28/24,1000,2024,U.S. Senate,11/5/24,DEM,Robert P. Casey Jr.,47.1
+88465,Emerson,2.9,-1.1,Online Panel/Text-to-Web,7.0,Pennsylvania,9/28/24,1000,2024,U.S. Senate,11/5/24,REP,Dave McCormick,45.4
+88459,RMG Research,2.3,-0.4,Online Panel,5.0,Texas,9/27/24,779,2024,U.S. Senate,11/5/24,DEM,Colin Allred,47.0
+88459,RMG Research,2.3,-0.4,Online Panel,5.0,Texas,9/27/24,779,2024,U.S. Senate,11/5/24,REP,Ted Cruz,50.0
+88497,RMG Research,2.3,-0.4,Online Panel,5.0,Florida,9/27/24,774,2024,U.S. Senate,11/5/24,DEM,Debbie Mucarsel-Powell,44.0
+88497,RMG Research,2.3,-0.4,Online Panel,5.0,Florida,9/27/24,774,2024,U.S. Senate,11/5/24,REP,Rick Scott,50.0
+88440,RMG Research,2.3,-0.4,Online Panel,5.0,Michigan,9/27/24,789,2024,U.S. Senate,11/5/24,DEM,Elissa Slotkin,49.0
+88440,RMG Research,2.3,-0.4,Online Panel,5.0,Michigan,9/27/24,789,2024,U.S. Senate,11/5/24,REP,Mike Rogers,43.0
+88508,Bowling Green State University/YouGov,,,Online Panel,7.0,Ohio,9/27/24,1000,2024,U.S. Senate,11/5/24,DEM,Sherrod Brown,49.0
+88508,Bowling Green State University/YouGov,,,Online Panel,7.0,Ohio,9/27/24,1000,2024,U.S. Senate,11/5/24,REP,Bernie Moreno,45.0
+88418,PPP,1.4,0.0,IVR/Text,4.0,Florida,9/26/24,808,2024,U.S. Senate,11/5/24,DEM,Debbie Mucarsel-Powell,43.0
+88418,PPP,1.4,0.0,IVR/Text,4.0,Florida,9/26/24,808,2024,U.S. Senate,11/5/24,REP,Rick Scott,44.0
+88418,PPP,1.4,0.0,IVR/Text,4.0,Florida,9/26/24,808,2024,U.S. Senate,11/5/24,LIB,Feena Bonoan,2.0
+88418,PPP,1.4,0.0,IVR/Text,4.0,Florida,9/26/24,808,2024,U.S. Senate,11/5/24,DEM,Debbie Mucarsel-Powell,44.0
+88418,PPP,1.4,0.0,IVR/Text,4.0,Florida,9/26/24,808,2024,U.S. Senate,11/5/24,REP,Rick Scott,47.0
+88419,PPP,1.4,0.0,IVR/Text,4.0,Texas,9/26/24,759,2024,U.S. Senate,11/5/24,DEM,Colin Allred,43.0
+88419,PPP,1.4,0.0,IVR/Text,4.0,Texas,9/26/24,759,2024,U.S. Senate,11/5/24,REP,Ted Cruz,45.0
+88419,PPP,1.4,0.0,IVR/Text,4.0,Texas,9/26/24,759,2024,U.S. Senate,11/5/24,LIB,Ted Brown,3.0
+88419,PPP,1.4,0.0,IVR/Text,4.0,Texas,9/26/24,759,2024,U.S. Senate,11/5/24,DEM,Colin Allred,46.0
+88419,PPP,1.4,0.0,IVR/Text,4.0,Texas,9/26/24,759,2024,U.S. Senate,11/5/24,REP,Ted Cruz,47.0
+88460,Lake Research,1.2,0.1,,1.0,North Dakota,9/26/24,500,2024,U.S. Senate,11/5/24,DEM,Katrina Christiansen,40.0
+88460,Lake Research,1.2,0.1,,1.0,North Dakota,9/26/24,500,2024,U.S. Senate,11/5/24,REP,Kevin Cramer,49.0
+88404,Siena/NYT,3.0,-1.5,Live Phone,9.0,Michigan,9/26/24,688,2024,U.S. Senate,11/5/24,DEM,Elissa Slotkin,44.0
+88404,Siena/NYT,3.0,-1.5,Live Phone,9.0,Michigan,9/26/24,688,2024,U.S. Senate,11/5/24,REP,Mike Rogers,40.0
+88404,Siena/NYT,3.0,-1.5,Live Phone,9.0,Michigan,9/26/24,688,2024,U.S. Senate,11/5/24,DEM,Elissa Slotkin,47.0
+88404,Siena/NYT,3.0,-1.5,Live Phone,9.0,Michigan,9/26/24,688,2024,U.S. Senate,11/5/24,REP,Mike Rogers,42.0
+88405,Siena/NYT,3.0,-1.5,Live Phone,9.0,Ohio,9/26/24,687,2024,U.S. Senate,11/5/24,DEM,Sherrod Brown,46.0
+88405,Siena/NYT,3.0,-1.5,Live Phone,9.0,Ohio,9/26/24,687,2024,U.S. Senate,11/5/24,REP,Bernie Moreno,41.0
+88405,Siena/NYT,3.0,-1.5,Live Phone,9.0,Ohio,9/26/24,687,2024,U.S. Senate,11/5/24,DEM,Sherrod Brown,47.0
+88405,Siena/NYT,3.0,-1.5,Live Phone,9.0,Ohio,9/26/24,687,2024,U.S. Senate,11/5/24,REP,Bernie Moreno,43.0
+88406,Siena/NYT,3.0,-1.5,Live Phone,9.0,Wisconsin,9/26/24,680,2024,U.S. Senate,11/5/24,DEM,Tammy Baldwin,50.0
+88406,Siena/NYT,3.0,-1.5,Live Phone,9.0,Wisconsin,9/26/24,680,2024,U.S. Senate,11/5/24,REP,Eric D. Hovde,42.0
+88406,Siena/NYT,3.0,-1.5,Live Phone,9.0,Wisconsin,9/26/24,680,2024,U.S. Senate,11/5/24,DEM,Tammy Baldwin,50.0
+88406,Siena/NYT,3.0,-1.5,Live Phone,9.0,Wisconsin,9/26/24,680,2024,U.S. Senate,11/5/24,REP,Eric D. Hovde,43.0
+88488,Marquette Law School,3.0,-1.1,Probability Panel,10.0,Wisconsin,9/26/24,882,2024,U.S. Senate,11/5/24,DEM,Tammy Baldwin,53.0
+88488,Marquette Law School,3.0,-1.1,Probability Panel,10.0,Wisconsin,9/26/24,882,2024,U.S. Senate,11/5/24,REP,Eric D. Hovde,46.0
+88488,Marquette Law School,3.0,-1.1,Probability Panel,10.0,Wisconsin,9/26/24,798,2024,U.S. Senate,11/5/24,DEM,Tammy Baldwin,53.0
+88488,Marquette Law School,3.0,-1.1,Probability Panel,10.0,Wisconsin,9/26/24,798,2024,U.S. Senate,11/5/24,REP,Eric D. Hovde,46.0
+88488,Marquette Law School,3.0,-1.1,Probability Panel,10.0,Wisconsin,9/26/24,882,2024,U.S. Senate,11/5/24,DEM,Tammy Baldwin,51.0
+88488,Marquette Law School,3.0,-1.1,Probability Panel,10.0,Wisconsin,9/26/24,882,2024,U.S. Senate,11/5/24,REP,Eric D. Hovde,45.0
+88488,Marquette Law School,3.0,-1.1,Probability Panel,10.0,Wisconsin,9/26/24,882,2024,U.S. Senate,11/5/24,OTH,Phil Anderson,1.0
+88488,Marquette Law School,3.0,-1.1,Probability Panel,10.0,Wisconsin,9/26/24,882,2024,U.S. Senate,11/5/24,OTH,Thomas Leager,1.0
+88488,Marquette Law School,3.0,-1.1,Probability Panel,10.0,Wisconsin,9/26/24,798,2024,U.S. Senate,11/5/24,DEM,Tammy Baldwin,51.0
+88488,Marquette Law School,3.0,-1.1,Probability Panel,10.0,Wisconsin,9/26/24,798,2024,U.S. Senate,11/5/24,REP,Eric D. Hovde,45.0
+88488,Marquette Law School,3.0,-1.1,Probability Panel,10.0,Wisconsin,9/26/24,798,2024,U.S. Senate,11/5/24,OTH,Phil Anderson,1.0
+88488,Marquette Law School,3.0,-1.1,Probability Panel,10.0,Wisconsin,9/26/24,798,2024,U.S. Senate,11/5/24,OTH,Thomas Leager,1.0
+88391,Emerson,2.9,-1.1,Online Panel/Text-to-Web,7.0,New York,9/25/24,1000,2024,U.S. Senate,11/5/24,DEM,Kirsten E. Gillibrand,50.0
+88391,Emerson,2.9,-1.1,Online Panel/Text-to-Web,7.0,New York,9/25/24,1000,2024,U.S. Senate,11/5/24,REP,Michael D. Sapraicone,33.3
+88391,Emerson,2.9,-1.1,Online Panel/Text-to-Web,7.0,New York,9/25/24,1000,2024,U.S. Senate,11/5/24,OTH,Diane Sare,1.2
+88424,ARW Strategies,,,,1.0,Indiana,9/25/24,600,2024,U.S. Senate,11/5/24,DEM,Valerie McCray,35.0
+88424,ARW Strategies,,,,1.0,Indiana,9/25/24,600,2024,U.S. Senate,11/5/24,REP,Jim Banks,49.0
+88485,McLaughlin,0.5,1.6,,4.0,Florida,9/25/24,1200,2024,U.S. Senate,11/5/24,DEM,Debbie Mucarsel-Powell,44.0
+88485,McLaughlin,0.5,1.6,,4.0,Florida,9/25/24,1200,2024,U.S. Senate,11/5/24,REP,Rick Scott,51.0
+88417,Victory Insights,1.3,0.1,IVR/Text-to-Web,1.0,Florida,9/25/24,600,2024,U.S. Senate,11/5/24,DEM,Debbie Mucarsel-Powell,43.8
+88417,Victory Insights,1.3,0.1,IVR/Text-to-Web,1.0,Florida,9/25/24,600,2024,U.S. Senate,11/5/24,REP,Rick Scott,44.6
+88410,AtlasIntel,2.7,-0.8,Online Ad,6.0,Arizona,9/25/24,946,2024,U.S. Senate,11/5/24,DEM,Ruben Gallego,49.8
+88410,AtlasIntel,2.7,-0.8,Online Ad,6.0,Arizona,9/25/24,946,2024,U.S. Senate,11/5/24,REP,Kari Lake,45.7
+88411,AtlasIntel,2.7,-0.8,Online Ad,6.0,Michigan,9/25/24,918,2024,U.S. Senate,11/5/24,DEM,Elissa Slotkin,43.6
+88411,AtlasIntel,2.7,-0.8,Online Ad,6.0,Michigan,9/25/24,918,2024,U.S. Senate,11/5/24,REP,Mike Rogers,49.3
+88412,AtlasIntel,2.7,-0.8,Online Ad,6.0,Nevada,9/25/24,858,2024,U.S. Senate,11/5/24,DEM,Jacky S. Rosen,47.5
+88412,AtlasIntel,2.7,-0.8,Online Ad,6.0,Nevada,9/25/24,858,2024,U.S. Senate,11/5/24,REP,Sam Brown,46.0
+88413,AtlasIntel,2.7,-0.8,Online Ad,6.0,Pennsylvania,9/25/24,1775,2024,U.S. Senate,11/5/24,DEM,Robert P. Casey Jr.,47.2
+88413,AtlasIntel,2.7,-0.8,Online Ad,6.0,Pennsylvania,9/25/24,1775,2024,U.S. Senate,11/5/24,REP,Dave McCormick,45.3
+88414,AtlasIntel,2.7,-0.8,Online Ad,6.0,Wisconsin,9/25/24,1077,2024,U.S. Senate,11/5/24,DEM,Tammy Baldwin,48.2
+88414,AtlasIntel,2.7,-0.8,Online Ad,6.0,Wisconsin,9/25/24,1077,2024,U.S. Senate,11/5/24,REP,Eric D. Hovde,46.7
+88469,Benenson Strategy Group/GS Strategy Group,,,Online Panel/Text-to-Web,0.0,Arizona,9/25/24,409,2024,U.S. Senate,11/5/24,DEM,Ruben Gallego,54.0
+88469,Benenson Strategy Group/GS Strategy Group,,,Online Panel/Text-to-Web,0.0,Arizona,9/25/24,409,2024,U.S. Senate,11/5/24,REP,Kari Lake,41.0
+88471,Benenson Strategy Group/GS Strategy Group,,,Online Panel/Text-to-Web,0.0,Michigan,9/25/24,416,2024,U.S. Senate,11/5/24,DEM,Elissa Slotkin,50.0
+88471,Benenson Strategy Group/GS Strategy Group,,,Online Panel/Text-to-Web,0.0,Michigan,9/25/24,416,2024,U.S. Senate,11/5/24,REP,Mike Rogers,46.0
+88472,Benenson Strategy Group/GS Strategy Group,,,Online Panel/Text-to-Web,0.0,Nevada,9/25/24,409,2024,U.S. Senate,11/5/24,DEM,Jacky S. Rosen,52.0
+88472,Benenson Strategy Group/GS Strategy Group,,,Online Panel/Text-to-Web,0.0,Nevada,9/25/24,409,2024,U.S. Senate,11/5/24,REP,Sam Brown,38.0
+88474,Benenson Strategy Group/GS Strategy Group,,,Online Panel/Text-to-Web,0.0,Pennsylvania,9/25/24,474,2024,U.S. Senate,11/5/24,DEM,Robert P. Casey Jr.,52.0
+88474,Benenson Strategy Group/GS Strategy Group,,,Online Panel/Text-to-Web,0.0,Pennsylvania,9/25/24,474,2024,U.S. Senate,11/5/24,REP,Dave McCormick,45.0
+88475,Benenson Strategy Group/GS Strategy Group,,,Online Panel/Text-to-Web,0.0,Wisconsin,9/25/24,411,2024,U.S. Senate,11/5/24,DEM,Tammy Baldwin,49.0
+88475,Benenson Strategy Group/GS Strategy Group,,,Online Panel/Text-to-Web,0.0,Wisconsin,9/25/24,411,2024,U.S. Senate,11/5/24,REP,Eric D. Hovde,47.0
+88422,USC Dornsife/CSU Long Beach/Cal Poly Pomona,,,Email,5.0,California,9/25/24,1685,2024,U.S. Senate,11/5/24,DEM,Adam B. Schiff,56.4
+88422,USC Dornsife/CSU Long Beach/Cal Poly Pomona,,,Email,5.0,California,9/25/24,1685,2024,U.S. Senate,11/5/24,REP,Steve Garvey,36.5
+88369,ActiVote,,,App Panel,8.0,New York,9/25/24,400,2024,U.S. Senate,11/5/24,DEM,Kirsten E. Gillibrand,59.7
+88369,ActiVote,,,App Panel,8.0,New York,9/25/24,400,2024,U.S. Senate,11/5/24,REP,Michael D. Sapraicone,40.3
+88364,Emerson,2.9,-1.1,Online Panel/Text-to-Web,7.0,Texas,9/24/24,950,2024,U.S. Senate,11/5/24,DEM,Colin Allred,44.9
+88364,Emerson,2.9,-1.1,Online Panel/Text-to-Web,7.0,Texas,9/24/24,950,2024,U.S. Senate,11/5/24,REP,Ted Cruz,48.9
+88365,Emerson,2.9,-1.1,Online Panel/Text-to-Web,7.0,Virginia,9/24/24,860,2024,U.S. Senate,11/5/24,DEM,Timothy Michael Kaine,51.1
+88365,Emerson,2.9,-1.1,Online Panel/Text-to-Web,7.0,Virginia,9/24/24,860,2024,U.S. Senate,11/5/24,REP,Hung Cao,41.2
+88427,WPAi,1.7,-0.1,Live Phone,3.0,North Dakota,9/24/24,521,2024,U.S. Senate,11/5/24,DEM,Katrina Christiansen,31.0
+88427,WPAi,1.7,-0.1,Live Phone,3.0,North Dakota,9/24/24,521,2024,U.S. Senate,11/5/24,REP,Kevin Cramer,60.0
+88380,Beacon/Shaw,2.8,-1.1,Live Phone/Text-to-Web,9.0,Arizona,9/24/24,1021,2024,U.S. Senate,11/5/24,DEM,Ruben Gallego,56.0
+88380,Beacon/Shaw,2.8,-1.1,Live Phone/Text-to-Web,9.0,Arizona,9/24/24,1021,2024,U.S. Senate,11/5/24,REP,Kari Lake,42.0
+88380,Beacon/Shaw,2.8,-1.1,Live Phone/Text-to-Web,9.0,Arizona,9/24/24,764,2024,U.S. Senate,11/5/24,DEM,Ruben Gallego,55.0
+88380,Beacon/Shaw,2.8,-1.1,Live Phone/Text-to-Web,9.0,Arizona,9/24/24,764,2024,U.S. Senate,11/5/24,REP,Kari Lake,42.0
+88403,Beacon/Shaw,2.8,-1.1,Live Phone/Text-to-Web,9.0,Pennsylvania,9/24/24,775,2024,U.S. Senate,11/5/24,DEM,Robert P. Casey Jr.,53.0
+88403,Beacon/Shaw,2.8,-1.1,Live Phone/Text-to-Web,9.0,Pennsylvania,9/24/24,775,2024,U.S. Senate,11/5/24,REP,Dave McCormick,44.0
+88403,Beacon/Shaw,2.8,-1.1,Live Phone/Text-to-Web,9.0,Pennsylvania,9/24/24,1021,2024,U.S. Senate,11/5/24,DEM,Robert P. Casey Jr.,53.0
+88403,Beacon/Shaw,2.8,-1.1,Live Phone/Text-to-Web,9.0,Pennsylvania,9/24/24,1021,2024,U.S. Senate,11/5/24,REP,Dave McCormick,44.0
+88363,Marist,2.9,-0.9,Live Phone/Online Panel/Text-to-Web,9.0,Arizona,9/24/24,1416,2024,U.S. Senate,11/5/24,DEM,Ruben Gallego,53.0
+88363,Marist,2.9,-0.9,Live Phone/Online Panel/Text-to-Web,9.0,Arizona,9/24/24,1416,2024,U.S. Senate,11/5/24,REP,Kari Lake,44.0
+88363,Marist,2.9,-0.9,Live Phone/Online Panel/Text-to-Web,9.0,Arizona,9/24/24,1264,2024,U.S. Senate,11/5/24,DEM,Ruben Gallego,54.0
+88363,Marist,2.9,-0.9,Live Phone/Online Panel/Text-to-Web,9.0,Arizona,9/24/24,1264,2024,U.S. Senate,11/5/24,REP,Kari Lake,44.0
+88390,Suffolk,2.9,-1.0,Live Phone,8.0,Arizona,9/24/24,500,2024,U.S. Senate,11/5/24,DEM,Ruben Gallego,46.6
+88390,Suffolk,2.9,-1.0,Live Phone,8.0,Arizona,9/24/24,500,2024,U.S. Senate,11/5/24,REP,Kari Lake,40.6
+88390,Suffolk,2.9,-1.0,Live Phone,8.0,Arizona,9/24/24,500,2024,U.S. Senate,11/5/24,GRE,Eduardo Quintana,3.2
+88430,Fabrizio/Impact,1.7,-0.3,Live Phone/Text-to-Web,2.0,Pennsylvania,9/24/24,600,2024,U.S. Senate,11/5/24,DEM,Robert P. Casey Jr.,49.0
+88430,Fabrizio/Impact,1.7,-0.3,Live Phone/Text-to-Web,2.0,Pennsylvania,9/24/24,600,2024,U.S. Senate,11/5/24,REP,Dave McCormick,45.0
+88331,Bullfinch,,,Online Panel,4.0,Florida,9/23/24,600,2024,U.S. Senate,11/5/24,DEM,Debbie Mucarsel-Powell,44.0
+88331,Bullfinch,,,Online Panel,4.0,Florida,9/23/24,600,2024,U.S. Senate,11/5/24,REP,Rick Scott,46.0
+88338,SurveyUSA,2.8,-1.3,IVR/Online Panel/Text-to-Web,8.0,Nebraska,9/23/24,558,2024,U.S. Senate,11/5/24,REP,Deb Fischer,44.0
+88338,SurveyUSA,2.8,-1.3,IVR/Online Panel/Text-to-Web,8.0,Nebraska,9/23/24,558,2024,U.S. Senate,11/5/24,IND,Dan Osborn,45.0
+88338,SurveyUSA,2.8,-1.3,IVR/Online Panel/Text-to-Web,8.0,Nebraska,9/23/24,558,2024,U.S. Senate,11/5/24,DEM,Preston Love Jr.,35.0
+88338,SurveyUSA,2.8,-1.3,IVR/Online Panel/Text-to-Web,8.0,Nebraska,9/23/24,558,2024,U.S. Senate,11/5/24,REP,Pete Ricketts,53.0
+88362,University of Maryland/Washington Post,2.5,-0.3,Live Phone/Text-to-Web,8.0,Maryland,9/23/24,1012,2024,U.S. Senate,11/5/24,DEM,Angela Alsobrooks,51.0
+88362,University of Maryland/Washington Post,2.5,-0.3,Live Phone/Text-to-Web,8.0,Maryland,9/23/24,1012,2024,U.S. Senate,11/5/24,REP,Larry Hogan,40.0
+88362,University of Maryland/Washington Post,2.5,-0.3,Live Phone/Text-to-Web,8.0,Maryland,9/23/24,1012,2024,U.S. Senate,11/5/24,LIB,Mike Scott,3.0
+88362,University of Maryland/Washington Post,2.5,-0.3,Live Phone/Text-to-Web,8.0,Maryland,9/23/24,1012,2024,U.S. Senate,11/5/24,DEM,Angela Alsobrooks,50.0
+88362,University of Maryland/Washington Post,2.5,-0.3,Live Phone/Text-to-Web,8.0,Maryland,9/23/24,1012,2024,U.S. Senate,11/5/24,REP,Larry Hogan,41.0
+88362,University of Maryland/Washington Post,2.5,-0.3,Live Phone/Text-to-Web,8.0,Maryland,9/23/24,1012,2024,U.S. Senate,11/5/24,LIB,Mike Scott,3.0
+88376,RMG Research,2.3,-0.4,Online Panel,5.0,Wisconsin,9/23/24,788,2024,U.S. Senate,11/5/24,DEM,Tammy Baldwin,51.0
+88376,RMG Research,2.3,-0.4,Online Panel,5.0,Wisconsin,9/23/24,788,2024,U.S. Senate,11/5/24,REP,Eric D. Hovde,45.0
+
+
 88369,ActiVote,,,App Panel,8,New York,9/25/24,400,2024,U.S. Senate,11/5/24,DEM,Kirsten E. Gillibrand,59.7
 88369,ActiVote,,,App Panel,8,New York,9/25/24,400,2024,U.S. Senate,11/5/24,REP,Michael D. Sapraicone,40.3
 88364,Emerson,2.9,-1.1,Online Panel/Text-to-Web,7,Texas,9/24/24,950,2024,U.S. Senate,11/5/24,DEM,Colin Allred,44.9

@@ -9,7 +9,12 @@ const PollTable = () => {
 const [cycle, setCycle] = useState('All');
   const [party, setParty] = useState('All');
   const [candidate, setCandidate] = useState('All');
-  
+  const [pollster, setPollster] = useState('All');
+  const options = {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+  };
   useEffect(() => {
     
     // Fetch and parse CSV file
@@ -52,11 +57,15 @@ const [cycle, setCycle] = useState('All');
     if (candidate !== 'All') {
       filteredData = filteredData.filter((d) => d.candidate_name === candidate);
     }
+    // Filter by pollster
+    if (pollster !== 'All') {
+      filteredData = filteredData.filter((d) => d.pollster === pollster);
+    }
 
     // Use Tidy.js to group and summarize the filtered data
     const output = tidy(
       filteredData,
-      groupBy(['poll_id','end_date','candidate_name', 'office_type',  'pollster'], [
+      groupBy(['poll_id','end_date','candidate_name', 'state',  'pollster'], [
         summarize({
           n: n(),
           average: mean('pct'),
@@ -109,6 +118,16 @@ const [cycle, setCycle] = useState('All');
           ))}
         </select>
 
+        <label> Pollster: </label>
+        <select value={pollster} onChange={(e) => setPollster(e.target.value)}>
+          <option value="All">All</option>
+          {[...new Set(pollData.map((d) => d.pollster))].map((pollster, idx) => (
+            <option key={idx} value={pollster}>
+              {pollster}
+            </option>
+          ))}
+        </select>
+
         <button onClick={processData} style={{ border: '2px solid green', color: 'yellow',  padding: '10px 20px', borderRadius: '5px' }}>Apply Filters</button>
       </div>
 
@@ -127,10 +146,10 @@ const [cycle, setCycle] = useState('All');
         <tbody>
           {groupedData.map((row, idx) => (
             <tr key={idx}>
-              <td style={{border:"red"}}>{row.poll_id}</td>
+              
               <td style={{border:"red"}}>{row.candidate_name}</td>
-              <td>{row.office_type}</td>
-              <td>{row.end_date.toDateString()}</td>
+              <td>{row.state}</td>
+              <td>{row.end_date.toDateString(undefined, options)}</td>
               <td>{row.pollster}</td>
               <td>{row.n}</td>
               <td>{row.average.toFixed(1)} %</td>

@@ -196,8 +196,8 @@ const USMap = () => {
             .style("top", (event.pageY - 28) + "px");
 
           d3.select(this)
-            .attr("stroke", "#333")
-            .attr("stroke-width", 3);  // Highlight the state boundary
+            .attr("stroke", "#333")// Highlight the state boundary
+            .attr("stroke-width", 3);  
         }
       })
       .on("mousemove", (event) => {

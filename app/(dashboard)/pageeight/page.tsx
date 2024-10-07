@@ -1,7 +1,7 @@
 "use client"; // Add this line at the top to make it a client component
 import React, { useEffect } from "react";
 import * as d3 from "d3";
-import usStates from '../../data/district.geojson'; // Your GeoJSON data for US states
+import usStates from '../../data/district.json'; // Your GeoJSON data for US states
 
 // Your merged data array with population and electoral votes
 
@@ -14,14 +14,17 @@ const District = () => { // Renamed the component to `USMap`
     const svg = d3.select("#map")
       .append("svg")
       .attr("width", width)
-      .attr("height", height);
+      .attr("height", height)
+      
 
-    const projection = d3.geoAlbersUsa().scale(1000).translate([width / 2, height / 2]);
+
+    const projection = d3.geoAlbersUsa().scale(1800).translate([width / 2, height / 2]);
     const path = d3.geoPath().projection(projection);
 
     // Create a mapping for the states from mergedArray for quick lookup
-    const stateDataMap = new window.Map(usStates.map(d => [d.stateName, d])); // Use `window.Map` explicitly to avoid any confusion
+    // const stateDataMap = new window.Map(usStates.map(d => [d.STATE, d])); // Use `window.Map` explicitly to avoid any confusion
 
+    const stateDataMap = new window.Map(usStates.features.map(d => [d.properties.STATE, d]));
 
     // Tooltip element
     const tooltip = d3.select("body")
@@ -41,11 +44,13 @@ const District = () => { // Renamed the component to `USMap`
       .enter()
       .append("path")
       .attr("d", path)
+      
+
       .attr("fill", (d) => {
-        const stateName = d.properties.ZIPCODE;
-        
-       
-      })
+        const stateName = d.properties.DISTRICT; // Change to the appropriate field from `properties`
+        const stateData = stateDataMap.get(stateName);
+        return stateData ? "#a45b8e" : "#ccc"; 
+})
       .attr("stroke", "#a45b8e")
       .attr("stroke-width", 1.5)
       .on("mouseover", function (event, d) {

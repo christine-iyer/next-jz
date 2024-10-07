@@ -22,6 +22,7 @@ export default function RootLayout({
     { href: '/pagefive', label: 'Maps' },
     { href: '/pagesix', label: 'EDA' },
     { href: '/pageseven', label: 'Time' },
+    { href: '/pageeight', label: 'District' },
     { href: '/docs', label: 'Docs' },
   ]
 

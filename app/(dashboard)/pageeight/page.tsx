@@ -1,7 +1,7 @@
 "use client"; // Add this line at the top to make it a client component
 import React, { useEffect } from "react";
 import * as d3 from "d3";
-import usStates from '../../data/district.json'; // Your GeoJSON data for US states
+import usStates from '../../data/districts.json'; // Your GeoJSON data for US states
 
 // Your merged data array with population and electoral votes
 
@@ -18,7 +18,7 @@ const District = () => { // Renamed the component to `USMap`
       
 
 
-    const projection = d3.geoAlbersUsa().scale(1800).translate([width / 2, height / 2]);
+    const projection = d3.geoAlbersUsa().scale(1000).translate([width / 2, height / 2]);
     const path = d3.geoPath().projection(projection);
 
     // Create a mapping for the states from mergedArray for quick lookup

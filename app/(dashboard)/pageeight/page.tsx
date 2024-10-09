@@ -174,7 +174,7 @@
 
          // Reset county boundary style after hover
          d3.select(this)
-           .attr("stroke", "gray")
+           .attr("stroke", "antiquewhite")
            .attr("stroke-width", 0.5);
        })
        .on("click", function (event, d) {

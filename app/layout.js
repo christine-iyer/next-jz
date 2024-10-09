@@ -23,7 +23,7 @@ export default function RootLayout({
     { href: '/pagesix', label: 'EDA' },
     { href: '/pageseven', label: 'Time' },
     { href: '/pageeight', label: 'District' },
-    { href: '/pagenine', label: 'Leaflet' },
+    // { href: '/pagenine', label: 'Leaflet' },
     { href: '/docs', label: 'Docs' },
   ]
 

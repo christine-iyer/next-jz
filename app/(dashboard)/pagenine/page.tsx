@@ -12,8 +12,9 @@ const Home = () => {
   return (
     <div>
       <h1>Map of Tax Differences</h1>
-      <Map data={data} />
-    </div>
+  
+      <Map class-name="newOne" data={data} /></div>
+   
   );
 };
 

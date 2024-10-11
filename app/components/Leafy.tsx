@@ -15,7 +15,7 @@ interface MapProps {
   data: AddressData[];
 }
 
-const Map: React.FC<MapProps> = ({ data }) => {
+const Leafy: React.FC<MapProps> = ({ data }) => {
   return (
     <MapContainer
       center={[43.65, -70.25]}
@@ -54,4 +54,4 @@ const getColor = (taxDifference: number): string => {
   return taxDifference > 0 ? 'red' : 'green';
 };
 
-export default Map;
+export default Leafy;

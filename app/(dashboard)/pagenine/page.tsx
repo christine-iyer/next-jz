@@ -1,7 +1,7 @@
 "use client"
 import dynamic from 'next/dynamic';
 
-const Map = dynamic(() => import('../../components/Map'), { ssr: false });
+const Leafy = dynamic(() => import('../../components/Leafy'), { ssr: false });
 
 const Home = () => {
   const data = [
@@ -13,7 +13,7 @@ const Home = () => {
     <div>
       <h1>Map of Tax Differences</h1>
   
-      <Map class-name="newOne" data={data} /></div>
+      <Leafy class-name="newOne" data={data} /></div>
    
   );
 };
